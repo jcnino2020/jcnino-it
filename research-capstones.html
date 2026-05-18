@@ -3,39 +3,45 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>School Events | JC Niñonuevo</title>
+  <title>Research & AI | JC Niñonuevo | IT Portfolio</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
-  
+
   <!-- SEO & Metadata -->
-  <meta name="description" content="Publication-grade coverage of school activities, ceremonies, and campus life. Photography by JC Niñonuevo.">
-  
+  <meta name="description" content="Academic capstones, systems evaluation studies, and AI integrations researched by JC Niñonuevo.">
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jcnino2020.github.io/jcnino/school-events.html">
-  <meta property="og:title" content="School Events | JC Niñonuevo">
-  <meta property="og:description" content="Publication-grade coverage of school activities, ceremonies, and campus life.">
-  <meta property="og:image" content="images/School%20Events/SE-01.JPG">
+  <meta property="og:url" content="https://jcnino2020.github.io/jcnino/research-capstones.html">
+  <meta property="og:title" content="Research & AI | JC Niñonuevo">
+  <meta property="og:description" content="Academic capstones, systems evaluation studies, and AI integrations researched by JC Niñonuevo.">
+  <meta property="og:image" content="images/hero_developer_ide.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="School Events | JC Niñonuevo">
-  <meta name="twitter:description" content="Publication-grade coverage of school activities, ceremonies, and campus life.">
-  <meta name="twitter:image" content="images/School%20Events/SE-01.JPG">
+  <meta name="twitter:title" content="Research & AI | JC Niñonuevo">
+  <meta name="twitter:description" content="Academic capstones, systems evaluation studies, and AI integrations researched by JC Niñonuevo.">
+  <meta name="twitter:image" content="images/hero_developer_ide.png">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/portfolio.css">
-  
+
 <script>
   tailwind.config = {
     theme: {
       extend: {
         colors: {
-          'bg':    '#000000',
-          'surface': '#0f0f0f',
-          'border': '#1f1f1f',
-          'text-main': '#ffffff',
-          'text-muted': '#a0a0a0',
-          'accent': '#ffffff',
+          'bg': '#EEF2F7',
+          'bg-alt': '#F8FAFC',
+          'surface': '#FFFFFF',
+          'surface-raised': '#EFF6FF',
+          'border': '#DCE3EA',
+          'border-strong': '#CBD5E1',
+          'text-main': '#0F172A',
+          'text-body': '#334155',
+          'text-muted': '#475569',
+          'text-faint': '#64748B',
+          'accent': '#2563EB',
+          'accent-teal': '#0F766E',
         },
         fontFamily: {
           sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
@@ -61,8 +67,8 @@
       <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
         <div>
           <p id="header-eyebrow" class="gsap-header-item text-text-muted text-xs font-bold uppercase mb-4">Category 03</p>
-          <h1 id="header-title" class="gsap-header-item text-4xl sm:text-5xl text-white font-bold">School Events</h1>
-          <p id="header-desc" class="gsap-header-item text-text-muted text-lg max-w-lg mt-4">Publication-grade coverage of school activities, ceremonies, and campus life.</p>
+          <h1 id="header-title" class="gsap-header-item text-4xl sm:text-5xl text-text-main font-bold">Research & AI</h1>
+          <p id="header-desc" class="gsap-header-item text-text-muted text-lg max-w-lg mt-4">Academic studies, developmental methodologies, systems evaluations, and AI models engineered by JC Niñonuevo.</p>
         </div>
         <div class="flex justify-end">
           <p id="photo-count" class="gsap-header-item text-text-muted text-xs font-bold"></p>
@@ -89,7 +95,7 @@
       src: 'images/School%20Events/' + p.file,
       subfolder: 'School Events',
       base: base,
-      alt: p.alt || ('School event photograph by JC Niñonuevo — ' + base)
+      alt: p.alt || ('Research overview — ' + base)
     };
   });
 
@@ -117,9 +123,9 @@
           class="w-full h-auto block"
           onerror="this.parentElement.parentElement.querySelector('img').src='${p.src}'" />
       </picture>
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/45 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
         <div class="flex justify-between items-end w-full">
-          <svg class="w-5 h-5 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5 text-text-main opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
           </svg>
         </div>
@@ -133,7 +139,7 @@
     const grid = document.getElementById('main-grid');
     if(!grid) return;
     grid.innerHTML = '';
-    document.getElementById('photo-count').textContent = allPhotos.length + ' photos';
+    document.getElementById('photo-count').textContent = allPhotos.length + ' research nodes';
     allPhotos.forEach(p => grid.appendChild(buildCard(p, allPhotos)));
 
     // GSAP: ScrollTrigger.batch — animates cards as they scroll into view

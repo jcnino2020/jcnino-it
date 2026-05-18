@@ -3,39 +3,45 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Drone Shots | JC Niñonuevo</title>
+  <title>Web Systems | JC Niñonuevo | IT Portfolio</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
-  
+
   <!-- SEO & Metadata -->
-  <meta name="description" content="Aerial perspectives. Landscapes, campuses, and skylines seen from above. Photography by JC Niñonuevo.">
-  
+  <meta name="description" content="Web systems, full-stack architectures, and custom database-driven applications engineered by JC Niñonuevo.">
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jcnino2020.github.io/jcnino/drone-shots.html">
-  <meta property="og:title" content="Drone Shots | JC Niñonuevo">
-  <meta property="og:description" content="Aerial perspectives. Landscapes, campuses, and skylines seen from above.">
-  <meta property="og:image" content="images/Drone%20Shots/Drone-006.JPG">
+  <meta property="og:url" content="https://jcnino2020.github.io/jcnino/web-development.html">
+  <meta property="og:title" content="Web Systems | JC Niñonuevo">
+  <meta property="og:description" content="Web systems, full-stack architectures, and custom database-driven applications engineered by JC Niñonuevo.">
+  <meta property="og:image" content="images/hero_developer_ide.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Drone Shots | JC Niñonuevo">
-  <meta name="twitter:description" content="Aerial perspectives. Landscapes, campuses, and skylines seen from above.">
-  <meta name="twitter:image" content="images/Drone%20Shots/Drone-006.JPG">
+  <meta name="twitter:title" content="Web Systems | JC Niñonuevo">
+  <meta name="twitter:description" content="Web systems, full-stack architectures, and custom database-driven applications engineered by JC Niñonuevo.">
+  <meta name="twitter:image" content="images/hero_developer_ide.png">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/portfolio.css">
-  
+
 <script>
   tailwind.config = {
     theme: {
       extend: {
         colors: {
-          'bg':    '#000000',
-          'surface': '#0f0f0f',
-          'border': '#1f1f1f',
-          'text-main': '#ffffff',
-          'text-muted': '#a0a0a0',
-          'accent': '#ffffff',
+          'bg': '#EEF2F7',
+          'bg-alt': '#F8FAFC',
+          'surface': '#FFFFFF',
+          'surface-raised': '#EFF6FF',
+          'border': '#DCE3EA',
+          'border-strong': '#CBD5E1',
+          'text-main': '#0F172A',
+          'text-body': '#334155',
+          'text-muted': '#475569',
+          'text-faint': '#64748B',
+          'accent': '#2563EB',
+          'accent-teal': '#0F766E',
         },
         fontFamily: {
           sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
@@ -54,15 +60,15 @@
 <script src="assets/portfolio.js" defer></script>
 
 <div class="pt-16 md:pt-20">
-  
+
   <!-- Page Header -->
   <section id="page-header" class="pt-6 pb-6 md:py-12 border-b border-border">
     <div class="max-w-7xl mx-auto px-6 sm:px-10">
       <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
         <div>
           <p id="header-eyebrow" class="gsap-header-item text-text-muted text-xs font-bold uppercase mb-4">Category 01</p>
-          <h1 id="header-title" class="gsap-header-item text-4xl sm:text-5xl text-white font-bold">Drone Shots</h1>
-          <p id="header-desc" class="gsap-header-item text-text-muted text-lg max-w-lg mt-4">Aerial perspectives. Landscapes, campuses, and skylines seen from above.</p>
+          <h1 id="header-title" class="gsap-header-item text-4xl sm:text-5xl text-text-main font-bold">Web Systems</h1>
+          <p id="header-desc" class="gsap-header-item text-text-muted text-lg max-w-lg mt-4">Responsive full-stack platforms, client onboardings, and custom-designed system architectures.</p>
         </div>
         <div class="flex justify-end">
           <p id="photo-count" class="gsap-header-item text-text-muted text-xs font-bold"></p>
@@ -90,38 +96,56 @@
       srcDecoded: 'images/Drone Shots/' + p.file,
       subfolder: 'Drone Shots',
       base: base,
-      alt: p.alt || ('Drone aerial photograph by JC Niñonuevo — ' + base)
+      alt: p.alt || ('Web system module — ' + base)
     };
   });
 
   function buildCard(p, gallery) {
     const wrap = document.createElement('div');
-    wrap.className = 'gallery-item relative rounded-xl overflow-hidden cursor-pointer';
+    wrap.className = 'gallery-item bg-white border border-border-strong rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300 cursor-pointer flex flex-col group';
     const b = p.base;
     const sf = p.subfolder;
+
+    // Parse Alt text into Title and Description
+    let title = 'Web Module';
+    let description = p.alt || '';
+    if (p.alt && p.alt.includes(':')) {
+      const parts = p.alt.split(':');
+      title = parts[0].trim();
+      description = parts.slice(1).join(':').trim();
+    }
+
     wrap.innerHTML = `
-      <picture>
-        <source
-          type="image/webp"
-          srcset="
-            images/optimized/800/${sf}/${b}-800.webp 800w,
-            images/optimized/1200/${sf}/${b}-1200.webp 1200w,
-            images/optimized/1600/${sf}/${b}-1600.webp 1600w
-          "
-          sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
-        <img
-          src="images/optimized/1200/${sf}/${b}-1200.webp"
-          alt="${p.alt}"
-          loading="lazy"
-          decoding="async"
-          class="w-full h-auto block"
-          onerror="this.parentElement.parentElement.querySelector('img').src='${p.src}'" />
-      </picture>
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-        <div class="flex justify-between items-end w-full">
-          <svg class="w-5 h-5 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+      <div class="relative overflow-hidden aspect-[4/3] bg-slate-50 border-b border-border-strong">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              images/optimized/800/${sf}/${b}-800.webp 800w,
+              images/optimized/1200/${sf}/${b}-1200.webp 1200w,
+              images/optimized/1600/${sf}/${b}-1600.webp 1600w
+            "
+            sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+          <img
+            src="images/optimized/1200/${sf}/${b}-1200.webp"
+            alt="${p.alt}"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-full object-cover transform group-hover:scale-[1.03] transition-transform duration-500"
+            onerror="this.src='${p.src}'" />
+        </picture>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      </div>
+      <div class="p-5 flex-grow flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-bold text-slate-800 font-sans tracking-tight mb-1 group-hover:text-blue-600 transition-colors">${title}</h3>
+          <p class="text-xs text-text-muted leading-relaxed font-normal">${description}</p>
+        </div>
+        <div class="flex items-center gap-1.5 text-blue-600 text-[10px] font-bold font-mono uppercase tracking-wider mt-4">
+          <span>View Interface</span>
+          <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
         </div>
       </div>
@@ -134,7 +158,7 @@
     const grid = document.getElementById('main-grid');
     if(!grid) return;
     grid.innerHTML = '';
-    document.getElementById('photo-count').textContent = allPhotos.length + ' photos';
+    document.getElementById('photo-count').textContent = allPhotos.length + ' projects';
     allPhotos.forEach(p => grid.appendChild(buildCard(p, allPhotos)));
 
     // GSAP: animate gallery items after DOM is ready

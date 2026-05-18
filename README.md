@@ -1,51 +1,43 @@
-# JC Niñonuevo Portfolio
+# JC Niñonuevo | BSIT Portfolio
 
-Static photography and video portfolio for JC Niñonuevo, featuring drone aerials, framed street and editorial photographs, school event coverage, and video editing projects.
+An elite, high-fidelity personal portfolio website for JC Niñonuevo, BS Information Technology student, developer, researcher, and systems administrator at the University of St. La Salle (Bacolod City, Philippines).
 
-## Pages
+This site serves as a comprehensive showroom for web applications, database designs, academic research capstones, and Cisco Packet Tracer network topologies.
 
-- `index.html` - Home, selected work, gallery highlights, about, and contact
-- `drone-shots.html` - Drone photography gallery
-- `framed-moments.html` - Street, nature, night, and travel photography gallery
-- `school-events.html` - School event and publication photography gallery
-- `video-projects.html` - Video project thumbnails and YouTube embeds
+## Pages & Architecture
 
-## Tech Stack
+- **`index.html`** - The primary dashboard. Features a premium GSAP-powered hero header, interactive focus area panels, dynamic projects showcase, interactive tech stack and specializations grid, professional experience ledger, and social connectivity hubs.
+- **`web-development.html`** - Dedicated gallery page for full-stack platforms, client-server models, dynamic SaaS platforms, and responsive Web interfaces.
+- **`system-design.html`** - Showroom for relational database blueprints, 3NF E-R diagrams, Level-1 data-flow (DFD) schemas, and backend system schemas.
+- **`research-capstones.html`** - Showroom for academic publications, capstone projects, departmental defense models, NLP processing pipelines, and AI integrations.
+- **`network-labs.html`** - Interactive learning hub featuring Cisco Packet Tracer enterprise network simulations (routing/switching setups, DHCP, SLAAC, ACLs, OSPF) with an integrated secure YouTube video player.
+- **`photo-manager.html`** - A highly sophisticated browser-based **IT Portfolio Project & Cisco Labs Manager** enabling dynamic drag-and-drop file reordering, offline JSON database compiler writes, and dynamic WebP image resizing.
 
-- Static HTML
-- Tailwind CSS via CDN
-- Shared custom CSS in `assets/portfolio.css`
-- Shared custom JavaScript in `assets/portfolio.js`
-- GSAP and ScrollTrigger via CDN
-- GitHub Pages for hosting and vercel.app
+## Tech Stack & Utilities
 
-## Recent Improvements
-
-- **Asset Centralization**: Reusable CSS and JS logic migrated to `assets/` to ensure consistency and easier maintenance.
-- **Enhanced UX**: Removed right-click context menu restrictions to respect browser defaults.
-- **Accessibility**: Implemented accessible lightboxes with ARIA roles, labels, and full keyboard/swipe navigation.
-- **Performance**: Optimized asset loading with `defer`, `fetchpriority`, and replaced remote image URLs with relative local paths.
-- **SEO & Metadata**: Added comprehensive Open Graph and Twitter card support across all main pages.
-- **Selected Work**: New featured projects section on the homepage to highlight professional experience.
+- **Markup & Layout**: Clean, semantic HTML5 structure.
+- **Styling**: Tailwind CSS coupled with shared, pure light-mode styles in `assets/portfolio.css`.
+- **Dynamic Injections**: Shared JavaScript templates in `assets/portfolio.js` that dynamically inject the unified navigation navbar, mobile menu overlay, footer, and active link states.
+- **Animations**: GSAP (GreenSock Animation Platform) and ScrollTrigger for smooth entry transitions and page physics.
+- **Interactive Mechanics**: Glare overlays, smooth anchor transitions, and swipe/keyboard-supported lightboxes.
 
 ## Run Locally
 
-Open `index.html` directly in a browser, or serve the folder with any static server:
+To test or develop the portfolio locally, you can serve the workspace folder with any local static HTTP server. For example:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8000`.
+Then navigate your web browser to:
+`http://localhost:8000`
 
-## Deployment
+## Developer Content Management
 
-This site is ready for GitHub Pages. Push changes to the repository branch configured for Pages, usually `main`, and GitHub Pages will serve the static files.
+The integrated project manager allows local administration of the showcase. Open `/photo-manager.html` in your browser to compile and update `assets/gallery-data.js` database arrays directly from your local filesystem.
 
-## Credits and Contact
+## Contact
 
-Photography, video work, and portfolio content by JC Niñonuevo.
-
-- Facebook: https://facebook.com/jcninoo
-- Instagram: https://instagram.com/photos.jcnino
-- Email: jcninonuevo@gmail.com
+- **GitHub**: [github.com/jcninoo](https://github.com/jcninoo)
+- **Facebook**: [facebook.com/jcninoo](https://facebook.com/jcninoo)
+- **Email**: jcninonuevo@gmail.com
