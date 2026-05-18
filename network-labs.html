@@ -305,18 +305,24 @@ gsap.fromTo('#video-grid .video-card',   // ← add #video-grid here
   );
 
   // ── 4. FOOTER: fade up on scroll
-  gsap.fromTo('#site-footer',
-    { y: 30, opacity: 0 },
-    {
-      y: 0, opacity: 1,
-      duration: 0.6, ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '#site-footer',
-        start: 'top 95%',
-        once: true
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      if (document.getElementById('site-footer')) {
+        gsap.fromTo('#site-footer',
+          { y: 30, opacity: 0 },
+          {
+            y: 0, opacity: 1,
+            duration: 0.6, ease: 'power2.out',
+            scrollTrigger: {
+              trigger: '#site-footer',
+              start: 'top 95%',
+              once: true
+            }
+          }
+        );
       }
-    }
-  );
+    }, 150);
+  });
 
   // ── 5. CHANNEL DIVIDER: staggered text on scroll
 gsap.fromTo(['#ch2-logo', '#ch2-eyebrow', '#ch2-title', '#ch2-desc'],
@@ -353,9 +359,8 @@ gsap.fromTo('#video-grid-2 .video-card',
 </script>
 
 <script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  // Vercel script removed to prevent 404
 </script>
-<script defer src="/_vercel/insights/script.js"></script>
 
 </body>
 </html>

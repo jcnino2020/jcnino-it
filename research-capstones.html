@@ -92,8 +92,8 @@
     const base = p.file.replace(/\.jpe?g$/i, '');
     return {
       id: i,
-      src: 'images/School%20Events/' + p.file,
-      subfolder: 'School Events',
+      src: 'images/' + p.file,
+      subfolder: '',
       base: base,
       alt: p.alt || ('Research overview — ' + base)
     };
@@ -101,32 +101,50 @@
 
   function buildCard(p, gallery) {
     const wrap = document.createElement('div');
-    wrap.className = 'gallery-item relative rounded-xl overflow-hidden cursor-pointer';
+    wrap.className = 'gallery-item bg-white border border-border-strong rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300 cursor-pointer flex flex-col group h-full';
     const b = p.base;
     const sf = p.subfolder;
+
+    // Parse Alt text into Title and Description
+    let title = 'Research Highlight';
+    let description = p.alt || '';
+    if (p.alt && p.alt.includes(':')) {
+      const parts = p.alt.split(':');
+      title = parts[0].trim();
+      description = parts.slice(1).join(':').trim();
+    }
+
     wrap.innerHTML = `
-      <picture>
-        <source
-          type="image/webp"
-          srcset="
-            images/optimized/800/${sf}/${b}-800.webp 800w,
-            images/optimized/1200/${sf}/${b}-1200.webp 1200w,
-            images/optimized/1600/${sf}/${b}-1600.webp 1600w
-          "
-          sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
-        <img
-          src="images/optimized/1200/${sf}/${b}-1200.webp"
-          alt="${p.alt}"
-          loading="lazy"
-          decoding="async"
-          class="w-full h-auto block"
-          onerror="this.parentElement.parentElement.querySelector('img').src='${p.src}'" />
-      </picture>
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/45 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-        <div class="flex justify-between items-end w-full">
-          <svg class="w-5 h-5 text-text-main opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+      <div class="relative overflow-hidden aspect-[4/3] bg-slate-50 border-b border-border-strong">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              images/optimized/800/${sf ? sf + '/' : ''}${b}-800.webp 800w,
+              images/optimized/1200/${sf ? sf + '/' : ''}${b}-1200.webp 1200w,
+              images/optimized/1600/${sf ? sf + '/' : ''}${b}-1600.webp 1600w
+            "
+            sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+          <img
+            src="images/optimized/1200/${sf ? sf + '/' : ''}${b}-1200.webp"
+            alt="${p.alt}"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-full object-cover transform group-hover:scale-[1.03] transition-transform duration-500"
+            onerror="this.src='${p.src}'" />
+        </picture>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      </div>
+      <div class="p-5 flex-grow flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-bold text-slate-800 font-sans tracking-tight mb-1 group-hover:text-blue-600 transition-colors">${title}</h3>
+          <p class="text-xs text-text-muted leading-relaxed font-normal">${description}</p>
+        </div>
+        <div class="mt-auto pt-4 flex items-center gap-1.5 text-blue-600 text-[10px] font-bold font-mono uppercase tracking-wider">
+          <span>View Documentation</span>
+          <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
         </div>
       </div>
@@ -204,26 +222,31 @@
     );
 
   // ── 3. FOOTER: fade up on scroll
-  gsap.fromTo('#site-footer',
-    { y: 30, opacity: 0 },
-    {
-      y: 0, opacity: 1,
-      duration: 0.6, ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '#site-footer',
-        start: 'top 95%',
-        once: true
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      if (document.getElementById('site-footer')) {
+        gsap.fromTo('#site-footer',
+          { y: 30, opacity: 0 },
+          {
+            y: 0, opacity: 1,
+            duration: 0.6, ease: 'power2.out',
+            scrollTrigger: {
+              trigger: '#site-footer',
+              start: 'top 95%',
+              once: true
+            }
+          }
+        );
       }
-    }
-  );
+    }, 150);
+  });
 
   // Gallery items handled inside renderGrid() via ScrollTrigger.batch
 </script>
 
 <script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  // Vercel script removed to prevent 404
 </script>
-<script defer src="/_vercel/insights/script.js"></script>
 
 </body>
 </html>

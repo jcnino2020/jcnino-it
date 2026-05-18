@@ -89,7 +89,7 @@
           <h1 id="hero-title" class="gsap-hero-item text-6xl sm:text-7xl lg:text-8xl text-text-main mb-8 leading-none tracking-tight font-bold">
             Building Systems. <br/><span class="font-light opacity-90 text-blue-900">Solving Problems.</span>
           </h1>
-          <p id="hero-desc" class="gsap-hero-item text-text-muted text-lg sm:text-xl max-w-lg mb-12 leading-relaxed font-normal">
+          <p id="hero-desc" class="gsap-hero-item text-text-muted text-lg sm:text-xl max-w-lg mb-8 leading-relaxed font-normal">
             Developer, researcher, and technical problem-solver pursuing an IT degree at the University of St. La Salle. Specializing in full-stack systems, database management, and network environments.
           </p>
           <div id="hero-buttons" class="gsap-hero-item flex flex-wrap gap-4">
@@ -1573,7 +1573,7 @@
       y: 0, opacity: 1,
       duration: 0.75, ease: 'power3.out',
       scrollTrigger: {
-        trigger: '#tools',
+        trigger: '#tools-learning',
         start: 'top 82%',
         once: true
       }
@@ -1586,7 +1586,7 @@
       scale: 1, opacity: 1,
       duration: 0.5, stagger: 0.04, ease: 'back.out(1.2)',
       scrollTrigger: {
-        trigger: '#tools',
+        trigger: '#tools-learning',
         start: 'top 85%',
         once: true
       }
@@ -1703,9 +1703,8 @@
 </script>
 
 <script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  // Vercel script removed to prevent 404
 </script>
-<script defer src="/_vercel/insights/script.js"></script>
 
 <script>
   window.addEventListener('load', () => {

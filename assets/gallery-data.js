@@ -15,28 +15,28 @@ window.galleryData = {
     { file: "GH-08.JPG", alt: "REST API Documentation: OpenAPI specification showing payload constraints for multi-tenant registry endpoints." }
   ],
   drone: [
-    { file: "Drone-001.JPG", alt: "AccessHub Portal: Responsive SaaS platform homepage layout built using Next.js and Tailwind CSS." },
-    { file: "Drone-002.JPG", alt: "Admin Control Panel: Multi-role user management console featuring secure session tracking and activity logging." },
-    { file: "Drone-003.JPG", alt: "Client Directory Module: Dynamic database indexing screen displaying MSME credentials and custom search tags." },
-    { file: "Drone-004.JPG", alt: "Interactive Onboarding Wizard: Client registration form with robust state persistence and field validation." },
-    { file: "Drone-005.JPG", alt: "System Analytics Dashboard: Real-time transactional tracking demonstrating canvas-based data visualizations." },
-    { file: "Drone-006.JPG", alt: "UI Component Library: Custom reusable dark-themed buttons, cards, modals, and input controls." }
+    { file: "GH-01.JPG", alt: "AccessHub Portal: Responsive SaaS platform homepage layout built using Next.js and Tailwind CSS." },
+    { file: "GH-02.JPG", alt: "Admin Control Panel: Multi-role user management console featuring secure session tracking and activity logging." },
+    { file: "GH-03.JPG", alt: "Client Directory Module: Dynamic database indexing screen displaying MSME credentials and custom search tags." },
+    { file: "GH-04.JPG", alt: "Interactive Onboarding Wizard: Client registration form with robust state persistence and field validation." },
+    { file: "GH-05.JPG", alt: "System Analytics Dashboard: Real-time transactional tracking demonstrating canvas-based data visualizations." },
+    { file: "GH-06.JPG", alt: "UI Component Library: Custom reusable dark-themed buttons, cards, modals, and input controls." }
   ],
   framed: [
-    { file: "FM-01.JPG", alt: "Entity-Relationship Diagram: Normalized schema model designed for small business operational data." },
-    { file: "FM-02.JPG", alt: "Relational Table Mapping: SQL table structural overview showing foreign keys, primary indices, and data type constraints." },
-    { file: "FM-03.JPG", alt: "Data Flow Diagram: Level-1 DFD mapping the secure transaction flow from consumer to merchant accounts." },
-    { file: "FM-04.JPG", alt: "User Access Control: System blueprint depicting JWT-based token generation and verification middleware." },
-    { file: "FM-05.JPG", alt: "API Request Gateway: System flow blueprint showing CORS check, rate limiting, and dynamic routing endpoints." },
-    { file: "FM-06.JPG", alt: "Multi-Tenant Partition: Database architecture showing separate physical schemas by organization ID." }
+    { file: "GH-02.JPG", alt: "Entity-Relationship Diagram: Normalized schema model designed for small business operational data." },
+    { file: "GH-03.JPG", alt: "Relational Table Mapping: SQL table structural overview showing foreign keys, primary indices, and data type constraints." },
+    { file: "GH-04.JPG", alt: "Data Flow Diagram: Level-1 DFD mapping the secure transaction flow from consumer to merchant accounts." },
+    { file: "GH-05.JPG", alt: "User Access Control: System blueprint depicting JWT-based token generation and verification middleware." },
+    { file: "GH-06.JPG", alt: "API Request Gateway: System flow blueprint showing CORS check, rate limiting, and dynamic routing endpoints." },
+    { file: "GH-07.JPG", alt: "Multi-Tenant Partition: Database architecture showing separate physical schemas by organization ID." }
   ],
   events: [
-    { file: "SE-01.JPG", alt: "Capstone Defense: AccessHub system architecture presentation at the USLS IT Department colloquium." },
-    { file: "SE-02.JPG", alt: "Academic Research Publication: Abstract copy of study integrating LLM agents with student synthesis platforms." },
-    { file: "SE-03.JPG", alt: "AI Embedding Service: Pipeline flowchart showing text tokenization, chunking, and PostgreSQL pgvector storage." },
-    { file: "SE-04.JPG", alt: "Document Parsing Module: Backend system layout for automated PDF document layout parsing and OCR analysis." },
-    { file: "SE-05.JPG", alt: "Evaluation Metrics: Data table detailing precision and recall scores of custom text classification algorithms." },
-    { file: "SE-06.JPG", alt: "Research Methodology: Core flowchart diagram depicting the hybrid developmental-evaluative research design." }
+    { file: "GH-01.JPG", alt: "Capstone Defense: AccessHub system architecture presentation at the USLS IT Department colloquium." },
+    { file: "GH-04.JPG", alt: "Academic Research Publication: Abstract copy of study integrating LLM agents with student synthesis platforms." },
+    { file: "GH-05.JPG", alt: "AI Embedding Service: Pipeline flowchart showing text tokenization, chunking, and PostgreSQL pgvector storage." },
+    { file: "GH-06.JPG", alt: "Document Parsing Module: Backend system layout for automated PDF document layout parsing and OCR analysis." },
+    { file: "GH-07.JPG", alt: "Evaluation Metrics: Data table detailing precision and recall scores of custom text classification algorithms." },
+    { file: "GH-08.JPG", alt: "Research Methodology: Core flowchart diagram depicting the hybrid developmental-evaluative research design." }
   ],
   videos: [
     {
