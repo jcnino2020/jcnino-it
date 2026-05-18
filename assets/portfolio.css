@@ -1,0 +1,384 @@
+/* 
+  Portfolio Central Design System 
+  JC Niñonuevo Portfolio
+*/
+
+/* ── Helvetica Neue Custom Font Family ── */
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueThin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueThinItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueUltraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueUltraLightItalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueLightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueRoman.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueMediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueBoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueHeavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueHeavyItalic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueBlack.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeueBlackItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --bg: #000000;
+  --surface: #0f0f0f;
+  --border: #1f1f1f;
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  --accent: #ffffff;
+}
+
+html { 
+  scroll-behavior: smooth; 
+  background: var(--bg); 
+}
+
+body { 
+  background: var(--bg); 
+  color: var(--text-main); 
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+  -webkit-font-smoothing: antialiased; 
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+::selection { 
+  background: var(--text-main); 
+  color: var(--bg); 
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #222; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #333; }
+
+/* Gallery Grid System */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+}
+
+/* Gallery Item */
+.gallery-item { 
+  transition: transform .4s ease, opacity .4s ease; 
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-item:hover { 
+  transform: scale(1.02); 
+  z-index: 10; 
+}
+
+.gallery-item img { 
+  filter: brightness(1); 
+  transition: filter .4s ease; 
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Service & Category Cards */
+.service-card {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Mobile Menu Transitions */
+#mobile-menu { 
+  transition: max-height .4s ease, opacity .4s ease; 
+}
+#mobile-menu.closed { 
+  max-height: 0; 
+  opacity: 0; 
+  overflow: hidden; 
+  pointer-events: none; 
+}
+#mobile-menu.open { 
+  max-height: 500px; 
+  opacity: 1; 
+  pointer-events: auto; 
+}
+
+/* Lightbox Styling */
+#lightbox, #video-lightbox { 
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(20px) saturate(180%); 
+  -webkit-backdrop-filter: blur(20px) saturate(180%); 
+}
+
+/* Lightbox image loading state */
+#lightbox-img {
+  /* Remove CSS transitions to let GSAP handle animations exclusively */
+  will-change: transform, opacity;
+}
+
+/* 
+   Hide the image immediately while the new source is loading.
+   This prevents the 'ghosting' or 'sticking' effect where the 
+   previous image remains visible until the new one finishes downloading.
+*/
+#lightbox-img.lb-loading {
+  opacity: 0;
+}
+
+/* Immediately stop any lingering animations once the image is ready */
+#lightbox-img:not(.lb-loading) {
+  animation: none;
+}
+
+/* Video & Projects */
+.video-card {
+  transition: transform 0.4s ease;
+}
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Utility: Image Drag & Protection removal side effect */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+/* Form Styling */
+input, textarea {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #333;
+  transition: all .3s;
+}
+input:focus, textarea:focus {
+  background: rgba(255,255,255,0.05);
+  border-color: #fff;
+  outline: none;
+}
+
+/* Section Spacing */
+section[id] {
+  scroll-margin-top: 64px;
+}
+@media (min-width: 768px) {
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+}
+
+/* Focus Visible */
+:focus-visible {
+  outline: 2px solid var(--text-main);
+  outline-offset: 4px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* GSAP Prevents Flash */
+.gsap-hero-item, .gsap-header-item, .gsap-reveal {
+  opacity: 0;
+}
+
+/* ==========================================================================
+   Premium UI/UX Additions
+   ========================================================================== */
+
+/* Native Standard Cross-Document View Transitions */
+@view-transition {
+  navigation: auto;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+}
+@keyframes fade-out {
+  to { opacity: 0; transform: translateY(-12px); }
+}
+
+::view-transition-old(root) {
+  animation: 200ms cubic-bezier(0.4, 0, 0.2, 1) both fade-out;
+}
+::view-transition-new(root) {
+  animation: 250ms cubic-bezier(0.4, 0, 0.2, 1) both fade-in;
+}
+
+/* Card Hover Mouse Glare Effect */
+.service-card, .video-card, #selected-work > div > div {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before, .video-card::before, #selected-work > div > div::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(350px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.08), transparent 80%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.service-card:hover::before, .video-card:hover::before, #selected-work > div > div:hover::before {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Premium Desktop Spacing Optimizations
+   (Tightening gaps/padding around horizontal dividers for a cleaner desktop layout,
+    strictly leaving the page headers and starting hero body spacings untouched. Grid gaps are untouched.)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  /* Lessen the gap between navigation header and starting hero body (index.html only) */
+  section#home {
+    padding-top: 3rem !important;      /* Lessen from 5rem (md:pt-20) */
+  }
+  section#home > div.w-full {
+    padding-top: 1.5rem !important;    /* Lessen from 5rem (md:py-20) */
+  }
+
+  /* Tighten vertical spacing around section divider lines (e.g. Services, About, Selected Work, Contact) */
+  section[class*="md:py-24"] {
+    padding-top: 3.5rem !important;    /* Lessen from 6rem (96px) to 3.5rem (56px) around dividers */
+    padding-bottom: 3.5rem !important; /* Lessen from 6rem (96px) to 3.5rem (56px) around dividers */
+  }
+  
+  /* Tighten vertical spacing around the footer divider line */
+  footer#site-footer[class*="md:py-12"] {
+    padding-top: 2rem !important;    /* Lessen from 3rem (48px) to 2rem (32px) around footer divider */
+    padding-bottom: 2rem !important; /* Lessen from 3rem (48px) to 2rem (32px) around footer divider */
+  }
+}
+
