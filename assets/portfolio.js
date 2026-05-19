@@ -1,6 +1,6 @@
 /**
  * Portfolio Shared JavaScript
- * JC Niñonuevo Portfolio 1
+ * JC Niñonuevo Portfolio
  */
 
 document.addEventListener('DOMContentLoaded', () => {
