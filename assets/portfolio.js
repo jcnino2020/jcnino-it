@@ -18,49 +18,48 @@ document.addEventListener('DOMContentLoaded', () => {
  * This completely isolates layout changes to this single JavaScript file
  * and avoids fetching HTML over CORS, supporting direct local execution.
  */const navHtml = `
-<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-border-strong shadow-md shadow-slate-900/5">
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/80">
   <div class="max-w-7xl mx-auto px-6 sm:px-10">
-    <div class="flex items-center justify-between h-14 md:h-20">
-      <a href="index.html" class="flex items-center group">
-        <span class="text-text-main font-bold text-sm tracking-normal uppercase transition-opacity flex items-center gap-1.5">
-          JC <span class="font-light opacity-80 group-hover:text-blue-600 transition-colors">Niñonuevo</span>
-        </span>
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <a href="index.html" class="flex items-center">
+        <img src="images/logo.png" alt="Portfolio" class="h-5 w-auto opacity-90 hover:opacity-100 transition-opacity invert" />
       </a>
 
       <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-8" id="nav-links">
-        <a href="index.html#home" class="nav-link text-text-muted hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Home</a>
-        <a href="index.html#about" class="nav-link text-text-muted hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">About</a>
-        <a href="index.html#skills" class="nav-link text-text-muted hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Skills</a>
-        <a href="index.html#projects" class="nav-link text-text-muted hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Projects</a>
-        <a href="index.html#research" class="nav-link text-text-muted hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Research</a>
-        <a href="index.html#experience" class="nav-link text-text-muted hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Experience</a>
+        <a href="index.html#home" class="nav-link text-slate-600 hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Home</a>
+        <a href="index.html#about" class="nav-link text-slate-600 hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">About</a>
+        <a href="index.html#skills" class="nav-link text-slate-600 hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Skills</a>
+        <a href="index.html#projects" class="nav-link text-slate-600 hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Projects</a>
+        <a href="index.html#research" class="nav-link text-slate-600 hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Research</a>
+        <a href="index.html#experience" class="nav-link text-slate-600 hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Experience</a>
       </div>
 
-      <!-- Optional Action Buttons -->
+      <!-- Action Buttons -->
       <div class="hidden lg:flex items-center gap-4" id="nav-cta">
-        <a href="index.html#contact" class="px-5 py-2.5 border border-border-strong bg-white text-text-main text-xs font-bold rounded-full hover:bg-slate-50 hover:scale-[1.03] transition-all duration-300 shadow-sm">Contact Me</a>
-        <a href="mailto:jcninonuevo@gmail.com?subject=Resume%20Request" class="px-5 py-2.5 bg-blue-600 text-white text-xs font-bold rounded-full hover:bg-blue-700 hover:scale-[1.03] transition-all duration-300 shadow-md shadow-blue-500/10">Request Resume</a>
+        <a href="index.html#contact" class="px-6 py-2.5 bg-blue-600 text-white text-xs font-bold rounded-full hover:bg-blue-700 hover:scale-105 transition-all shadow-md shadow-blue-500/10">Contact Me</a>
+        <a href="mailto:jcninonuevo@gmail.com?subject=Resume%20Request" class="px-6 py-2.5 border border-blue-600/20 text-blue-600 text-xs font-bold rounded-full hover:bg-blue-50 transition-all hover:scale-105">Request Resume</a>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="hamburger" class="md:hidden text-text-main p-2 rounded-lg hover:bg-slate-100 transition-colors border border-transparent hover:border-border-strong" aria-label="Menu">
+      <button id="hamburger" class="md:hidden text-slate-800 p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Menu">
         <svg id="ham-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
         <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="closed md:hidden overflow-y-auto max-h-[52vh] bg-white border border-border-strong shadow-xl rounded-xl mt-1 px-2 py-1.5 pb-1">
-      <div class="grid grid-cols-2 gap-1 border-t border-transparent">
-        <a href="index.html#home" class="text-text-muted hover:text-blue-600 hover:bg-slate-50 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all block">Home</a>
-        <a href="index.html#about" class="text-text-muted hover:text-blue-600 hover:bg-slate-50 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all block">About</a>
-        <a href="index.html#skills" class="text-text-muted hover:text-blue-600 hover:bg-slate-50 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all block">Skills</a>
-        <a href="index.html#projects" class="text-text-muted hover:text-blue-600 hover:bg-slate-50 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all block">Projects</a>
-        <a href="index.html#research" class="text-text-muted hover:text-blue-600 hover:bg-slate-50 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all block">Research</a>
-        <a href="index.html#experience" class="text-text-muted hover:text-blue-600 hover:bg-slate-50 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all block">Experience</a>
-        <div class="col-span-2 pt-1 mt-0.5 border-t border-border-strong">
-          <a href="mailto:jcninonuevo@gmail.com?subject=Resume%20Request" class="block text-center w-full py-1.5 rounded-full text-[11px] font-bold bg-blue-600 text-white shadow-md shadow-blue-500/10 hover:bg-blue-700 transition-all">Request Resume</a>
+    <div id="mobile-menu" class="closed md:hidden">
+      <div class="py-6 flex flex-col gap-5 border-t border-slate-100">
+        <a href="index.html#home" class="text-slate-600 hover:text-blue-600 text-2xl font-bold transition-colors">Home</a>
+        <a href="index.html#about" class="text-slate-600 hover:text-blue-600 text-2xl font-bold transition-colors">About</a>
+        <a href="index.html#skills" class="text-slate-600 hover:text-blue-600 text-2xl font-bold transition-colors">Skills</a>
+        <a href="index.html#projects" class="text-slate-600 hover:text-blue-600 text-2xl font-bold transition-colors">Projects</a>
+        <a href="index.html#research" class="text-slate-600 hover:text-blue-600 text-2xl font-bold transition-colors">Research</a>
+        <a href="index.html#experience" class="text-slate-600 hover:text-blue-600 text-2xl font-bold transition-colors">Experience</a>
+        <div class="pt-4 border-t border-slate-100 flex flex-col gap-3">
+          <a href="index.html#contact" class="block text-center w-full py-3 rounded-full text-base font-bold bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-500/10">Contact Me</a>
+          <a href="mailto:jcninonuevo@gmail.com?subject=Resume%20Request" class="block text-center w-full py-3 rounded-full text-base font-bold border border-blue-600/20 text-blue-600 hover:bg-blue-50 transition-all">Request Resume</a>
         </div>
       </div>
     </div>
@@ -365,7 +364,10 @@ function injectComponents() {
     const normPage = page.replace(/\.html$/, '') || 'index';
 
     // 1. Inject Navbar
-    if (!document.getElementById('main-nav')) {
+    const navPlaceholder = document.getElementById('navbar-placeholder');
+    if (navPlaceholder && !document.getElementById('main-nav')) {
+        navPlaceholder.innerHTML = navHtml;
+    } else if (!document.getElementById('main-nav')) {
         document.body.insertAdjacentHTML('afterbegin', navHtml);
     }
 
@@ -385,36 +387,36 @@ function injectComponents() {
         lightboxPlaceholder.insertAdjacentHTML('beforeend', projectDetailsModalHtml);
     }
 
-    // Toggle Nav Link Active classes   }
-
     // Toggle Nav Link Active classes
     document.querySelectorAll('#nav-links a, #mobile-menu a, #site-footer a').forEach(a => {
         const href = a.getAttribute('href') || '';
         const isSubpage = href.includes('research-capstones.html') || href.includes('web-development.html') || href.includes('system-design.html') || href.includes('network-labs.html');
 
+        const isNavbarLink = a.closest('#main-nav') || a.closest('#mobile-menu');
+        const activeClass = isNavbarLink ? 'text-blue-600' : 'text-text-main';
+        const inactiveClass = isNavbarLink ? 'text-slate-600' : 'text-text-muted';
+
+        let isActive = false;
         if (normPage === 'research-capstones' && href.includes('research')) {
-            a.classList.remove('text-text-muted');
-            a.classList.add('text-text-main', 'active');
+            isActive = true;
         } else if (normPage === 'web-development' && href.includes('projects')) {
-            a.classList.remove('text-text-muted');
-            a.classList.add('text-text-main', 'active');
+            isActive = true;
         } else if (normPage === 'system-design' && href.includes('projects')) {
-            a.classList.remove('text-text-muted');
-            a.classList.add('text-text-main', 'active');
+            isActive = true;
         } else if (normPage === 'network-labs' && href.includes('projects')) {
-            a.classList.remove('text-text-muted');
-            a.classList.add('text-text-main', 'active');
+            isActive = true;
         } else if (normPage === 'index' && !isSubpage) {
             if (href.endsWith('#home') || href === 'index.html') {
-                a.classList.remove('text-text-muted');
-                a.classList.add('text-text-main', 'active');
-            } else {
-                a.classList.remove('text-text-main', 'active');
-                a.classList.add('text-text-muted');
+                isActive = true;
             }
+        }
+
+        if (isActive) {
+            a.classList.remove('text-text-muted', 'text-slate-600');
+            a.classList.add(activeClass, 'active');
         } else {
-            a.classList.remove('text-text-main', 'active');
-            a.classList.add('text-text-muted');
+            a.classList.remove('text-text-main', 'text-blue-600', 'active');
+            a.classList.add(inactiveClass);
         }
     });
 }
@@ -981,12 +983,12 @@ function initScrollSpy() {
             const href = a.getAttribute('href') || '';
             const isSubpage = href.includes('research-capstones.html') || href.includes('web-development.html') || href.includes('system-design.html') || href.includes('network-labs.html');
             if (!isSubpage && href.includes(`#${current}`)) {
-                a.classList.remove('text-text-muted');
-                a.classList.add('text-text-main', 'active');
+                a.classList.remove('text-text-muted', 'text-slate-600');
+                a.classList.add('text-blue-600', 'active');
             } else {
                 if (!isSubpage || (isSubpage && normPage !== 'research-capstones')) {
-                    a.classList.remove('text-text-main', 'active');
-                    a.classList.add('text-text-muted');
+                    a.classList.remove('text-text-main', 'text-blue-600', 'active');
+                    a.classList.add('text-slate-600');
                 }
             }
         });
