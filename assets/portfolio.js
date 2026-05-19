@@ -1,6 +1,6 @@
 /**
  * Portfolio Shared JavaScript
- * JC Niñonuevo Portfolio
+ * JC Niñonuevo Portfolio 1
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -510,8 +510,8 @@ function getPreloadSrc(src) {
     const match = decoded.match(/^images\/(?:(.+)\/)?([^\/]+)\.(jpe?g|png|webp)$/i);
     if (!match) return null;
     const subfolder = match[1] || null;
-    const baseName  = match[2];
-    const webpName  = `${baseName}-1600.webp`;
+    const baseName = match[2];
+    const webpName = `${baseName}-1600.webp`;
     return subfolder
         ? `images/optimized/1600/${subfolder}/${webpName}`
         : `images/optimized/1600/${webpName}`;
@@ -588,8 +588,8 @@ function getLightboxSrc(src) {
     const match = decoded.match(/^images\/(?:(.+)\/)?([^\/]+)\.(jpe?g|png|webp)$/i);
     if (!match) return src; // fallback — return original
     const subfolder = match[1] || null;  // e.g. "Drone Shots", or null for root
-    const baseName  = match[2];           // e.g. "GH-01"
-    const webpName  = `${baseName}-2048.webp`;
+    const baseName = match[2];           // e.g. "GH-01"
+    const webpName = `${baseName}-2048.webp`;
     if (subfolder) {
         return `images/optimized/2048/${subfolder}/${webpName}`;
     } else {
@@ -635,7 +635,7 @@ function syncLightbox(direction = null) {
         }
 
         // Trigger smooth entry once loaded
-        img.onload = function() {
+        img.onload = function () {
             img.classList.remove('lb-loading');
 
             if (window.gsap) {
@@ -664,7 +664,7 @@ function syncLightbox(direction = null) {
         };
 
         // Fallback to original if optimized WebP fails
-        img.onerror = function() {
+        img.onerror = function () {
             img.classList.remove('lb-loading');
             if (img.src !== p.src) {
                 img.src = p.src;
