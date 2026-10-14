@@ -18,51 +18,22 @@ document.addEventListener('DOMContentLoaded', () => {
  * This completely isolates layout changes to this single JavaScript file
  * and avoids fetching HTML over CORS, supporting direct local execution.
  */const navHtml = `
-<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/80">
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50">
   <div class="max-w-7xl mx-auto px-6 sm:px-10">
     <div class="flex items-center justify-between h-16 md:h-20">
-      <a href="index.html" class="flex items-center">
-        <img src="images/logo.png" alt="Portfolio" class="h-5 w-auto opacity-90 hover:opacity-100 transition-opacity invert" />
-      </a>
-
-      <!-- Desktop Nav -->
+      <a href="index.html" class="brand-link" aria-label="JC Niñonuevo home"><span class="brand-mark">JC<span class="brand-dot">.</span></span><span class="brand-name">NIÑONUEVO</span></a>
       <div class="hidden md:flex items-center gap-8" id="nav-links">
-        <a href="index.html#home" class="nav-link text-slate-600 hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Home</a>
-        <a href="index.html#about" class="nav-link text-slate-600 hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">About</a>
-        <a href="index.html#skills" class="nav-link text-slate-600 hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Skills</a>
-        <a href="index.html#projects" class="nav-link text-slate-600 hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Projects</a>
-        <a href="index.html#research" class="nav-link text-slate-600 hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Research</a>
-        <a href="index.html#experience" class="nav-link text-slate-600 hover:text-blue-600 text-sm font-bold tracking-normal transition-colors">Experience</a>
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#projects" class="nav-link">Work</a>
+        <a href="index.html#experience" class="nav-link">Experience</a>
       </div>
-
-      <!-- Action Buttons -->
-      <div class="hidden lg:flex items-center gap-4" id="nav-cta">
-        <a href="index.html#contact" class="px-6 py-2.5 bg-blue-600 text-white text-xs font-bold rounded-full hover:bg-blue-700 hover:scale-105 transition-all shadow-md shadow-blue-500/10">Contact Me</a>
-        <a href="mailto:jcninonuevo@gmail.com?subject=Resume%20Request" class="px-6 py-2.5 border border-blue-600/20 text-blue-600 text-xs font-bold rounded-full hover:bg-blue-50 transition-all hover:scale-105">Request Resume</a>
-      </div>
-
-      <!-- Mobile Menu Button -->
-      <button id="hamburger" class="md:hidden text-slate-800 p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Menu">
-        <svg id="ham-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
+      <div class="hidden md:flex items-center" id="nav-cta"><a href="index.html#contact" class="nav-contact">Let's talk <span aria-hidden="true">↗</span></a></div>
+      <button id="hamburger" class="md:hidden menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span id="ham-icon">Menu</span><span id="close-icon" class="hidden">Close</span></button>
     </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="closed md:hidden">
-      <div class="py-6 flex flex-col gap-5 border-t border-slate-100">
-        <a href="index.html#home" class="text-slate-600 hover:text-blue-600 text-2xl font-bold transition-colors">Home</a>
-        <a href="index.html#about" class="text-slate-600 hover:text-blue-600 text-2xl font-bold transition-colors">About</a>
-        <a href="index.html#skills" class="text-slate-600 hover:text-blue-600 text-2xl font-bold transition-colors">Skills</a>
-        <a href="index.html#projects" class="text-slate-600 hover:text-blue-600 text-2xl font-bold transition-colors">Projects</a>
-        <a href="index.html#research" class="text-slate-600 hover:text-blue-600 text-2xl font-bold transition-colors">Research</a>
-        <a href="index.html#experience" class="text-slate-600 hover:text-blue-600 text-2xl font-bold transition-colors">Experience</a>
-        <div class="pt-4 border-t border-slate-100 flex flex-col gap-3">
-          <a href="index.html#contact" class="block text-center w-full py-3 rounded-full text-base font-bold bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-500/10">Contact Me</a>
-          <a href="mailto:jcninonuevo@gmail.com?subject=Resume%20Request" class="block text-center w-full py-3 rounded-full text-base font-bold border border-blue-600/20 text-blue-600 hover:bg-blue-50 transition-all">Request Resume</a>
-        </div>
-      </div>
-    </div>
+    <div id="mobile-menu" class="closed md:hidden"><div class="mobile-links">
+      <a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#projects">Work</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a>
+    </div></div>
   </div>
 </nav>
 `;
@@ -442,6 +413,8 @@ function initMobileMenu() {
         open = !open;
         menu.classList.toggle('open', open);
         menu.classList.toggle('closed', !open);
+        newBtn.setAttribute('aria-expanded', String(open));
+        newBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
         const hamIcon = document.getElementById('ham-icon');
         const closeIcon = document.getElementById('close-icon');
         if (hamIcon) hamIcon.classList.toggle('hidden', open);
@@ -454,6 +427,8 @@ function initMobileMenu() {
             open = false;
             menu.classList.add('closed');
             menu.classList.remove('open');
+            newBtn.setAttribute('aria-expanded', 'false');
+            newBtn.setAttribute('aria-label', 'Open menu');
             const hamIcon = document.getElementById('ham-icon');
             const closeIcon = document.getElementById('close-icon');
             if (hamIcon) hamIcon.classList.remove('hidden');
