@@ -1,43 +1,38 @@
-# JC Niñonuevo | BSIT Portfolio
+# JC Niñonuevo | IT Portfolio
 
-An elite, high-fidelity personal portfolio website for JC Niñonuevo, BS Information Technology student, developer, researcher, and systems administrator at the University of St. La Salle (Bacolod City, Philippines).
+A static professional portfolio for JC Niñonuevo, a BS Information Technology student at the University of St. La Salle in Bacolod City, Philippines.
 
-This site serves as a comprehensive showroom for web applications, database designs, academic research capstones, and Cisco Packet Tracer network topologies.
+## Pages
 
-## Pages & Architecture
+- `index.html`: biography, selected work, capabilities, tools, research, dated experience, and contact links.
+- `case-study-gnet.html`, `case-study-drainwatch.html`, `case-study-hydroalert.html`, `case-study-truthlens.html`: project problems, approaches, challenges, implemented behavior, source links, dates, and limitations.
+- `web-development.html`, `system-design.html`, `research-capstones.html`, `network-labs.html`: existing academic project galleries and network demonstrations.
+- `photo-manager.html`: local gallery content-management utility.
 
-- **`index.html`** - The primary dashboard. Features a premium GSAP-powered hero header, interactive focus area panels, dynamic projects showcase, interactive tech stack and specializations grid, professional experience ledger, and social connectivity hubs.
-- **`web-development.html`** - Dedicated gallery page for full-stack platforms, client-server models, dynamic SaaS platforms, and responsive Web interfaces.
-- **`system-design.html`** - Showroom for relational database blueprints, 3NF E-R diagrams, Level-1 data-flow (DFD) schemas, and backend system schemas.
-- **`research-capstones.html`** - Showroom for academic publications, capstone projects, departmental defense models, NLP processing pipelines, and AI integrations.
-- **`network-labs.html`** - Interactive learning hub featuring Cisco Packet Tracer enterprise network simulations (routing/switching setups, DHCP, SLAAC, ACLs, OSPF) with an integrated secure YouTube video player.
-- **`photo-manager.html`** - A highly sophisticated browser-based **IT Portfolio Project & Cisco Labs Manager** enabling dynamic drag-and-drop file reordering, offline JSON database compiler writes, and dynamic WebP image resizing.
+## Implementation
 
-## Tech Stack & Utilities
+The homepage and case studies use semantic static HTML, `assets/home.css`, and `assets/home.js`. The established visual system uses Helvetica Neue with forest green, cream, and mint surfaces. Archive pages use the existing Tailwind/GSAP setup, `assets/portfolio.css`, `assets/2026.css`, and shared navigation/modal logic in `assets/portfolio.js`.
 
-- **Markup & Layout**: Clean, semantic HTML5 structure.
-- **Styling**: Tailwind CSS coupled with shared, pure light-mode styles in `assets/portfolio.css`.
-- **Dynamic Injections**: Shared JavaScript templates in `assets/portfolio.js` that dynamically inject the unified navigation navbar, mobile menu overlay, footer, and active link states.
-- **Animations**: GSAP (GreenSock Animation Platform) and ScrollTrigger for smooth entry transitions and page physics.
-- **Interactive Mechanics**: Glare overlays, smooth anchor transitions, and swipe/keyboard-supported lightboxes.
-
-## Run Locally
-
-To test or develop the portfolio locally, you can serve the workspace folder with any local static HTTP server. For example:
+No build step or package installation is required. Run locally with:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then navigate your web browser to:
-`http://localhost:8000`
+Open `http://localhost:8000`. The existing Vercel integration deploys pushes to `main`.
 
-## Developer Content Management
+## Professional content
 
-The integrated project manager allows local administration of the showcase. Open `/photo-manager.html` in your browser to compile and update `assets/gallery-data.js` database arrays directly from your local filesystem.
+- `downloads/JC-Ninonuevo-CV.pdf`: public CV based on the owner-supplied resume. Personal demographic data, residential address, private phone numbers, and reference contacts are omitted.
+- `images/jc-ninonuevo.jpg`: headshot extracted from the supplied resume.
+- `images/projects/`: actual screenshots captured from the public project interfaces on 3 November 2026, with origin metadata embedded in the JPEGs.
+- `PORTFOLIO-CONTENT.md`: factual sources and claim boundaries.
+- `PRODUCT.md`: product scope and constraints.
+
+Project source dates describe recorded source changes, rather than project start or completion. Prototype capabilities and limitations are identified explicitly; no unverified impact metrics are used.
 
 ## Contact
 
-- **GitHub**: [github.com/jcninoo](https://github.com/jcninoo)
-- **Facebook**: [facebook.com/jcninoo](https://facebook.com/jcninoo)
-- **Email**: jcninonuevo@gmail.com
+- GitHub: [github.com/jcnino2020](https://github.com/jcnino2020)
+- LinkedIn: [linkedin.com/in/jcninoo](https://linkedin.com/in/jcninoo)
+- Email: jcninonuevo@gmail.com
