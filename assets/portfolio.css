@@ -692,3 +692,6 @@ input, textarea {
   section#home { padding-top: 7rem !important; }
   section#home > div.w-full { padding-top: 4rem !important; }
 }
+
+/* Collection wayfinding for the remaining legacy archive. */
+.archive-breadcrumbs,.archive-category-nav{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;font-size:14px;line-height:1.5;padding-block:18px;color:#14251f}.archive-breadcrumbs a,.archive-category-nav a{min-height:44px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:4px}.archive-category-nav{border-top:1px solid #c8d1c8;border-bottom:1px solid #c8d1c8}.archive-category-nav [aria-current="page"]{font-weight:700}

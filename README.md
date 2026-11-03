@@ -1,10 +1,10 @@
 # JC Niñonuevo | IT Portfolio
 
-A static professional portfolio for JC Niñonuevo, a BS Information Technology student at the University of St. La Salle in Bacolod City, Philippines.
+A professional portfolio with static pages and a serverless contact function for JC Niñonuevo, a BS Information Technology student at the University of St. La Salle in Bacolod City, Philippines.
 
 ## Pages
 
-- `index.html`: biography, selected work, capabilities, tools, research, dated experience, and contact links.
+- `index.html`: biography, selected work, capabilities, tools, research, dated experience, project filters, and the contact form.
 - `case-study-gnet.html`, `case-study-drainwatch.html`, `case-study-hydroalert.html`, `case-study-truthlens.html`: project problems, approaches, challenges, implemented behavior, source links, dates, and limitations.
 - `web-development.html`: existing web-project archive.
 - `research-capstones.html`: three public project briefs with proposed methods and explicit evidence boundaries; downloadable PDF and Markdown.
@@ -17,7 +17,7 @@ A static professional portfolio for JC Niñonuevo, a BS Information Technology s
 
 The homepage, case studies, and four content collections use semantic static HTML, `assets/home.css`, and `assets/home.js`. The established visual system uses Helvetica Neue with forest green, cream, and mint surfaces. The web-project archive uses the existing Tailwind/GSAP setup, `assets/portfolio.css`, `assets/2026.css`, and shared navigation/modal logic in `assets/portfolio.js`.
 
-No build step or package installation is required. Run locally with:
+Static pages need no build step or package installation. The contact endpoint in `api/contact.mjs` is deployed as a Vercel Node function with built-in APIs only. A basic static preview does not execute that endpoint; use Vercel development for a complete backend preview. Run the static pages locally with:
 
 ```bash
 python3 -m http.server 8000
@@ -44,3 +44,11 @@ Project source dates describe recorded source changes, rather than project start
 ## Content collection boundaries
 
 Education/training is sourced from the supplied resume. The owner confirmed that testimonials, certificate/award documents, and approved research files are unavailable; no such claims are fabricated. Research downloads are newly prepared project briefs, rather than published papers. The practice configurations have not been executed in Packet Tracer or on hardware; no saved .pkt/.pka simulation or observed output is claimed.
+
+## Visitor features
+
+`assets/visitor.js` provides email copying, category/search filtering with URL state and empty recovery, contact validation/status, and opt-in film players. `api/contact.mjs` forwards validated messages to the owner’s existing enquiry inbox; messages appear there, rather than generating email notifications. Inbox failures are displayed without clearing visitor input.
+
+`404.html` is the custom Vercel missing-page response and uses root-absolute assets. The legacy web archive now links to every collection. Captions/transcripts are not fabricated: original films currently lack caption tracks and the owner has no files; players request captions when supplied, and text overviews/the lab read-along remain available.
+
+Run backend validation and delivery-contract tests with `node --test tests/contact.test.mjs`. These tests inject an upstream response and never send messages to the real inbox.

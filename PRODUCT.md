@@ -23,3 +23,6 @@ Use real work as evidence. Distinguish prototype behavior from deployed services
 
 ## Publication gaps
 The owner confirmed there are no testimonials, certificate/award files, or approved research files yet. Present documented training and newly authored concept briefs honestly; do not create fake certificates, endorsements, published results, or saved simulation files.
+
+## Visitor features
+The user requested copy-email, contact form, project filters, collection wayfinding, video accessibility support, and a real custom 404 page with automatic deployment. The contact form uses a POST-only Vercel function connected to the existing private enquiry inbox at www.jcnino.dev; it does not promise email notifications. No inbox authentication or database credentials are exposed. Three original films have no caption track on YouTube, and the owner confirmed no caption files are available. Request captions in opt-in players, provide written overviews and the network lab text, and do not invent transcripts. The user has not selected a replacement palette; preserve existing visual identity for this feature scope.

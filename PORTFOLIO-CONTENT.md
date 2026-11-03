@@ -20,3 +20,15 @@ Updated 3 November 2026.
 - System diagrams: source-derived static portfolio delivery, HydroAlert field-report flow, and HydroAlert IndexedDB report object. No photography is presented as a technical diagram in the updated collection.
 - Creative photographs: existing owner portfolio assets (Drone-001, FM-01, SE-01), with visual descriptions. No unsupported camera settings, shoot dates, or publication credits added.
 - Creative video titles and ownership verified through YouTube's public oEmbed endpoint: K_9mOUj-flY = Manila 2024; fddAYV8uWgc = USLS Campus Montage; hJMdcnx4vAo = Liceo Yearbook 2022 Pictorial BTS; author JC Niñonuevo. Those videos were previously mislabeled as network demonstrations; updated pages separate them correctly.
+
+## Visitor feature verification
+
+- Contact: /api/contact is a POST-only server function; validates name/email/topic/message/request ID, rejects cross-origin browser submissions and oversized payloads, and forwards only public enquiry fields to the existing www.jcnino.dev/api/enquiries service. It cannot read or administer enquiries, forwards no credentials, and does not change inbox security. Stable request IDs support safe retries through the inbox's existing duplicate detection.
+- Contact outcome: success requires an explicit 201/success:true from the inbox; errors retain visitor text. Existing inbox GET returned 401 during inspection. Automated success/error testing uses injected/mock responses and does not send test messages to the real inbox. No production storage success is inferred from mock testing.
+- Copy email: Clipboard API with selected-text fallback and a visible live status.
+- Project exploration: seven actual projects/collections, category and search controls, URL state, visible result count, empty/reset state, and all entries visible without JavaScript.
+- Collection wayfinding: breadcrumbs/category navigation include the remaining legacy web-development archive; existing case-study breadcrumbs retained.
+- Video: YouTube's visible player labels reported captions unavailable on all three original uploads (Manila 2024, USLS Campus Montage, Liceo Yearbook 2022 Pictorial BTS). The owner confirmed no caption files. Opt-in youtube-nocookie players request captions when available; brief source/cover-based written overviews are explicitly not spoken transcripts. The actual network lab has a full text walkthrough, not a falsely labeled video transcript.
+- Missing pages: root 404.html uses absolute asset/navigation URLs so deeply nested missing paths can recover. Verify production HTTP status is 404, not a successful-page rewrite.
+
+- Architecture documentation now separates static page delivery from the new server-side contact path. The page-delivery SVG is explicitly scoped and does not imply the contact form is browser-only. Native-select verification confirms all six topics, including Web development; an integration test checks that each selectable topic is accepted by the delivery validator.
