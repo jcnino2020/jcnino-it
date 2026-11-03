@@ -49,7 +49,7 @@ const footerHtml = `
           <span class="text-text-main text-lg font-bold tracking-tight flex items-center gap-1.5">
             JC <span class="font-light text-text-muted">Niñonuevo</span>
           </span>
-          <span class="text-[10px] text-text-faint font-sans uppercase tracking-normal mt-1">BS Information Technology Student</span>
+          <span class="text-sm text-text-faint font-sans tracking-normal mt-1">BS Information Technology Student</span>
         </div>
         <p class="text-text-muted text-xs leading-relaxed max-w-sm font-normal">
           Built as a dedicated IT portfolio to showcase systems, research, development work, and technical learning.
@@ -62,7 +62,7 @@ const footerHtml = `
 
       <!-- Column 2: Quick Links -->
       <div class="md:col-span-3 flex flex-col items-start gap-3">
-        <span class="text-text-main text-[10px] font-sans uppercase tracking-normal text-text-faint font-bold">Quick Links</span>
+        <span class="text-text-main text-sm font-sans tracking-normal text-text-faint font-bold">Quick Links</span>
         <div class="flex flex-col gap-2">
            <a href="index.html#home" class="text-text-muted hover:text-blue-600 text-xs font-bold transition-colors">Home</a>
            <a href="index.html#about" class="text-text-muted hover:text-blue-600 text-xs font-bold transition-colors">About</a>
@@ -76,7 +76,7 @@ const footerHtml = `
 
       <!-- Column 3: Social & Professional -->
       <div class="md:col-span-3 flex flex-col items-start gap-3">
-        <span class="text-text-main text-[10px] font-sans uppercase tracking-normal text-text-faint font-bold">Connect</span>
+        <span class="text-text-main text-sm font-sans tracking-normal text-text-faint font-bold">Connect</span>
         <div class="flex flex-col gap-2">
           <a href="mailto:jcninonuevo@gmail.com" class="text-text-muted hover:text-blue-600 text-xs flex items-center gap-2 transition-colors font-normal">
             <svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -101,8 +101,8 @@ const footerHtml = `
 
     <!-- Bottom copyright row -->
     <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <span class="text-text-faint text-[10px] font-sans uppercase tracking-normal font-bold">JC Niñonuevo &copy; <span class="year"></span>. All rights reserved.</span>
-      <span class="text-text-faint text-[10px] font-sans uppercase tracking-normal font-bold">BSIT Academic Portfolio</span>
+      <span class="text-text-faint text-sm font-sans tracking-normal font-bold">JC Niñonuevo &copy; <span class="year"></span>. All rights reserved.</span>
+      <span class="text-text-faint text-sm font-sans tracking-normal font-bold">BSIT Academic Portfolio</span>
     </div>
   </div>
 </footer>
@@ -115,7 +115,7 @@ const imageLightboxHtml = `
 
     <!-- Modal Header -->
     <div class="flex items-center justify-between px-6 py-4 bg-slate-50 border-b border-border-strong">
-      <span class="text-[10px] font-sans uppercase tracking-normal text-text-faint font-bold">System Interface View</span>
+      <span class="text-sm font-sans tracking-normal text-text-faint font-bold">System Interface View</span>
       <button onclick="closeLightbox()" aria-label="Close lightbox"
         class="w-8 h-8 flex items-center justify-center text-text-muted hover:text-text-main hover:bg-slate-200 transition-colors rounded-full border border-border bg-white shadow-sm">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,7 +141,7 @@ const imageLightboxHtml = `
         </svg>
       </button>
 
-      <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[50vh] object-contain rounded-lg shadow-sm" />
+      <img id="lightbox-img" alt="" class="max-w-full max-h-[50vh] object-contain rounded-lg shadow-sm" />
     </div>
 
     <!-- Modal Footer Caption -->
@@ -166,7 +166,7 @@ const videoLightboxHtml = `
 
     <!-- Video Modal Header -->
     <div class="flex items-center justify-between px-6 py-4 bg-slate-50 border-b border-border-strong">
-      <span class="text-[10px] font-sans uppercase tracking-normal text-text-faint font-bold">Cisco Lab Simulation Player</span>
+      <span class="text-sm font-sans tracking-normal text-text-faint font-bold">Cisco Lab Simulation Player</span>
       <button onclick="closeVideoLightbox()" aria-label="Close lightbox"
         class="w-8 h-8 flex items-center justify-center text-text-muted hover:text-text-main hover:bg-slate-200 transition-colors rounded-full border border-border bg-white shadow-sm">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

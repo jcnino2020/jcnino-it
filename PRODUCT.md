@@ -41,3 +41,7 @@ The homepage features the owner-selected GawangPinas, PasabayBCD, Sugar Inventor
 ## AWS course completion
 
 The owner supplied a one-page certificate for Introduction to AWS Identity and Access Management (IAM), awarded to Jan Carlo Niñonuevo by AWS Training & Certification and completed 29 October 2026. List it as a course completion certificate in the homepage training section, with links to the unchanged original PDF. Do not elevate it into an AWS professional certification or invent a verification ID/URL.
+
+## Label presentation
+
+The owner asked to change the pictured uppercase name/location strip and clarified that the request covers similar labels. Remove decorative heading eyebrows, status dots, counters, and redundant hero metadata. Keep useful project statuses and facts in readable, naturally cased text. Preserve the established palette, brand wordmark, content, routes, and working visitor features.

@@ -151,7 +151,7 @@ The palette pairs a deep navy frame with cool, light reading surfaces and pale b
 - **Title:** project titles; see the title token. Other article and timeline titles use contextual fluid ramps in the same family.
 - **Body:** browser-default base size (16px) with inherited line height (1.5); descriptions commonly expand to 17–20px.
 - **Reading:** case-study copy (18px, line height 1.75), reduced to 17px on mobile. Article content uses 65–75ch limits where present; case content is capped at 850px.
-- **Label:** field labels (15px, bold); action labels use 14px bold. Existing tracked metadata and section eyebrows are compatibility artifacts, not a recommended label system.
+- **Label:** field labels (15px, bold); action labels use 14px bold. Featured project metadata uses regular text (14px, weight 400, line height 1.5), normal letter spacing, and natural casing. Archive action, footer, and detail labels also use natural casing rather than tracked uppercase.
 
 **The Existing Type Rule.** Keep the bundled Helvetica Neue family and the observed bold-heading/body relationship when extending the current site.
 
@@ -163,7 +163,7 @@ Desktop layouts combine two-column work grids, split copy/image sections, and ru
 
 ## Elevation & Depth
 
-The main site is flat at rest: full-width tonal sections, thin separators, and image cropping provide depth without card shadows. Hero imagery uses a dark gradient overlay for its caption. Hover feedback is small and local: the primary action rises 2px, screenshots scale to 1.025, and directional affordances shift. Reduced-motion preferences collapse transition and animation duration and disable smooth scrolling.
+The main site is flat at rest: full-width tonal sections, thin separators, and image cropping provide depth without card shadows. Hero imagery stands on its own without a decorative caption or caption gradient. Hover feedback is small and local: the primary action rises 2px, screenshots scale to 1.025, and directional affordances shift. Reduced-motion preferences collapse transition and animation duration and disable smooth scrolling.
 
 The retained web-systems archive carries older shadows, rounded galleries, and overlay treatments. Keep them scoped to that existing implementation rather than treating them as main-site defaults.
 
@@ -171,7 +171,7 @@ The retained web-systems archive carries older shadows, rounded galleries, and o
 
 ## Shapes
 
-Main-site buttons, search controls, contact fields, screenshots, and content panels have square corners. One-pixel borders and horizontal rules define controls and lists. The small circular availability/status dot is an exception. Archive-specific radii remain local compatibility details.
+Main-site buttons, search controls, contact fields, screenshots, and content panels have square corners. One-pixel borders and horizontal rules define controls and lists. Availability is expressed as text without a decorative status dot. Archive-specific radii remain local compatibility details.
 
 ## Components
 
@@ -186,6 +186,10 @@ Square outlined category controls have a minimum height of 44px, medium text (15
 ### Cards / Containers
 
 Work entries are open compositions rather than raised boxes: an interface preview where supplied, a thin divider above title/details, and supporting copy. The screenshot frame uses a 1.6 aspect ratio and a subtle blue-gray border. Hover zoom belongs to the image; retain the original screenshot. Collection notes use soft blue fill and generous inset padding without elevation.
+
+### Headings and metadata
+
+The homepage hero and section titles lead directly with their headings. Do not add decorative name/location strips, section eyebrows, status dots, image counters, or redundant hero metadata. Preserve useful availability, project statuses, and factual qualifications as readable text. Featured project metadata follows the regular 14px treatment above. The retained archive uses natural-case action, footer, and detail labels with normal spacing; its navy footer keeps secondary text pale blue and readable. The established brand wordmark retains its casing and tracking.
 
 ### Inputs / Fields
 
@@ -214,4 +218,6 @@ The main sticky header has three desktop grid tracks, a compact wordmark, center
 
 Evidence: extracted from `assets/home.css`, sampled `assets/portfolio.css` and `assets/2026.css`, page stylesheet links, and `PRODUCT.md`; visually checked the desktop and mobile navy hero and the desktop web-systems archive captures in `.impeccable/review/`. Parent review supplied passing contrast checks for body, muted text, large accents, actions, dark copy, form help, and focus. Contact styling was checked in source; no settled form capture was used for this record.
 
-Not canonized: existing uppercase section eyebrows, glyph arrows/menu marks, and legacy archive radii/shadows. They remain outside this approved palette-only change; do not turn them into new system requirements.
+Label-refinement evidence: compared `PRODUCT.md`, `.impeccable/review/label-direction.md`, the shipped `index.html` and `web-development.html`, and label/footer rules in `assets/home.css`, `assets/portfolio.css`, `assets/portfolio.js`, and `assets/2026.css` against the desktop/mobile homepage and archive full-page and viewport captures. The independent review in `.impeccable/review/labels-review.md` records a ship disposition. This refinement preserves the existing palette, font, radius, and frontmatter tokens.
+
+Not canonized or repaired: retained glyph arrows/menu marks, legacy archive radii/shadows, and pre-existing `.impeccable/design.json` drift. They remain outside this scoped label refinement; do not turn them into new system requirements or refresh the sidecar as a side effect.

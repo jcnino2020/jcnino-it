@@ -62,3 +62,9 @@ Local browser verification passed for four ordered cards and their direct URLs, 
 Source: owner-supplied `/Users/jcnino/Downloads/AWS - IAM.pdf`, one landscape page reviewed visually and through text extraction. It reads “AWS Training & Certification”, “Completion Certificate”, “Introduction to AWS Identity and Access Management (IAM)”, “Completed: October 29, 2026”, and “Awarded to JAN CARLO NIÑONUEVO”. The document contains no displayed verification ID/URL. It supports a course completion entry, not a claim of an AWS professional certification, exam result, or demonstrated production cloud experience.
 
 The homepage training heading and earlier publication-gap statements are updated for this newly supplied evidence. `downloads/AWS-IAM-Completion-Certificate.pdf` is a byte-identical copy of the original, with no authoring, alteration, or recoloring. The certificate exposes only the public name, course, issuer heading, and completion date. No CV or existing technical lab is changed.
+
+## Label refinement (4 November 2026)
+
+Removed redundant decorative name/location and section strips, the hero role/scroll strip, visual caption/counter, capability numbering, and the archive category eyebrow. Public identity and location remain in the About/footer content. Project statuses remain visible in larger, untracked text; archive footer/detail metadata uses natural case. Project links, certificate, source facts, URLs, and visitor features are preserved. No new claims or raster assets were added.
+
+The manual design scan reports mostly pre-existing archive styling and token advisories; section padding is supplied by inner `.wrap` / `.section-pad` rules. The inactive lightbox’s empty image source was removed (its source is assigned on opening); footer metadata contrast was improved while restyling it.
