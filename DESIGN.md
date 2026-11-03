@@ -199,6 +199,8 @@ Contact fields have dark navy fill, light text, square corners, a one-pixel pale
 
 The main sticky header has three desktop grid tracks, a compact wordmark, centered text links, and an outlined contact action. Text links turn ice blue on hover. Below 980px, the menu control exposes stacked navigation links with dividers. Preserve actual link semantics and the current menu behavior. Resource navigation uses underlined links with 44px minimum targets and a stronger underline for the current page.
 
+The More disclosure extends the existing header with two plain-language groups, Explore and Case studies. Desktop popovers use two columns, a square bordered surface, 14px links with 44px targets, and existing navy/light archive colors. Mobile disclosures stack the groups inside the scrollable navigation. Hover entry fades and lifts the panel into place over 180ms; a 140ms exit grace period lets visitors cross the trigger-to-panel gap before closing. Keyboard and touch activation use the same disclosure, with Escape and outside-click dismissal. Reduced motion removes transitions.
+
 ## Do's and Don'ts
 
 ### Do:

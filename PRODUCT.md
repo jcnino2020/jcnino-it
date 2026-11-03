@@ -45,3 +45,7 @@ The owner supplied a one-page certificate for Introduction to AWS Identity and A
 ## Label presentation
 
 The owner asked to change the pictured uppercase name/location strip and clarified that the request covers similar labels. Remove decorative heading eyebrows, status dots, counters, and redundant hero metadata. Keep useful project statuses and facts in readable, naturally cased text. Preserve the established palette, brand wordmark, content, routes, and working visitor features.
+
+## More dropdown
+
+The owner requested all remaining public pages in a More dropdown that opens and closes automatically on hover with animation. Include five portfolio collections, four retained case studies, and Education & certificates in grouped links. Match every public header, including the archive and missing-page recovery header. Preserve primary navigation, provide click/touch and keyboard behavior, and honor reduced motion.

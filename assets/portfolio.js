@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     injectComponents();
+    window.initPortfolioNavigation?.();
     initMobileMenu();
     updateYear();
     initLightboxListeners();
@@ -26,13 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="index.html#home" class="nav-link">Home</a>
         <a href="index.html#about" class="nav-link">About</a>
         <a href="index.html#projects" class="nav-link">Work</a>
+        <a href="index.html#skills" class="nav-link">Skills</a>
         <a href="index.html#experience" class="nav-link">Experience</a>
+        <!-- BEGIN MORE NAVIGATION --><details class="nav-more" data-nav-more><summary aria-controls="more-desktop-panel">More<span class="nav-more-chevron" aria-hidden="true"></span></summary><div class="nav-more-popover" id="more-desktop-panel"><div class="nav-more-grid"><div class="nav-more-group"><p class="nav-more-heading">Explore</p><ul><li><a href="/web-development">Web systems</a></li><li><a href="/system-design">System design</a></li><li><a href="/research-capstones">Research &amp; capstones</a></li><li><a href="/network-labs">Network labs</a></li><li><a href="/creative-work">Photo &amp; video</a></li><li><a href="/#education">Education &amp; certificates</a></li></ul></div><div class="nav-more-group"><p class="nav-more-heading">Case studies</p><ul><li><a href="/case-study-gnet">GNET Network &amp; Data</a></li><li><a href="/case-study-drainwatch">BCD DrainWatch</a></li><li><a href="/case-study-hydroalert">HydroAlert Negros</a></li><li><a href="/case-study-truthlens">TruthLens</a></li></ul></div></div></div></details><!-- END MORE NAVIGATION -->
       </div>
       <div class="hidden md:flex items-center" id="nav-cta"><a href="index.html#contact" class="nav-contact">Let's talk <span aria-hidden="true">↗</span></a></div>
       <button id="hamburger" class="md:hidden menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span id="ham-icon">Menu</span><span id="close-icon" class="hidden">Close</span></button>
     </div>
     <div id="mobile-menu" class="closed md:hidden"><div class="mobile-links">
-      <a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#projects">Work</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a>
+      <a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#projects">Work</a><a href="index.html#skills">Skills</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a>
+        <!-- BEGIN MORE NAVIGATION --><details class="nav-more" data-nav-more><summary aria-controls="more-mobile-panel">More<span class="nav-more-chevron" aria-hidden="true"></span></summary><div class="nav-more-popover" id="more-mobile-panel"><div class="nav-more-grid"><div class="nav-more-group"><p class="nav-more-heading">Explore</p><ul><li><a href="/web-development">Web systems</a></li><li><a href="/system-design">System design</a></li><li><a href="/research-capstones">Research &amp; capstones</a></li><li><a href="/network-labs">Network labs</a></li><li><a href="/creative-work">Photo &amp; video</a></li><li><a href="/#education">Education &amp; certificates</a></li></ul></div><div class="nav-more-group"><p class="nav-more-heading">Case studies</p><ul><li><a href="/case-study-gnet">GNET Network &amp; Data</a></li><li><a href="/case-study-drainwatch">BCD DrainWatch</a></li><li><a href="/case-study-hydroalert">HydroAlert Negros</a></li><li><a href="/case-study-truthlens">TruthLens</a></li></ul></div></div></div></details><!-- END MORE NAVIGATION -->
     </div></div>
   </div>
 </nav>

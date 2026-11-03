@@ -60,3 +60,9 @@ The public origin is `https://jcnino-it.vercel.app`. All 10 public pages have cl
 The homepage Person JSON-LD uses the public name, approved headshot, existing description, and verified GitHub/YouTube profiles. It excludes private resume details and unverified profile identifiers.
 
 Refresh metadata with `python3 scripts/build-seo.py`, render the card with `python3 scripts/render-social-card.py` (ImageMagick required), and validate with `python3 scripts/validate-seo.py`. After deployment, use `python3 scripts/validate-seo.py --live` to verify direct page responses and published discovery assets. Social platforms and search engines control recrawling and cache refreshes.
+
+## More navigation
+
+Every public header includes a native More disclosure. `scripts/build-navigation.py` keeps the ten static headers and the shared archive header in sync. The menu covers all nine secondary public pages plus the education/certificate section. Utility and missing-page routes are not navigation destinations.
+
+`assets/navigation.js` adds hover opening, a short exit delay, animated closing, keyboard focus handling, Escape, outside click, and touch toggling. `assets/navigation.css` provides the shared popover and mobile layout, with reduced-motion support. Native disclosure behavior remains available without JavaScript on static pages. Run `python3 scripts/build-navigation.py` after changing the menu list, then `python3 scripts/validate-navigation.py` to compare every header against the sitemap.
