@@ -15,7 +15,7 @@ A professional portfolio with static pages and a serverless contact function for
 
 ## Implementation
 
-The homepage, case studies, and four content collections use semantic static HTML, `assets/home.css`, and `assets/home.js`. The established visual system uses Helvetica Neue with forest green, cream, and mint surfaces. The web-project archive uses the existing Tailwind/GSAP setup, `assets/portfolio.css`, `assets/2026.css`, and shared navigation/modal logic in `assets/portfolio.js`.
+The homepage, case studies, and four content collections use semantic static HTML, `assets/home.css`, and `assets/home.js`. The established visual system uses Helvetica Neue with midnight navy, ice blue, and off-white surfaces. The web-project archive uses the existing Tailwind/GSAP setup, `assets/portfolio.css`, `assets/2026.css`, and shared navigation/modal logic in `assets/portfolio.js`.
 
 Static pages need no build step or package installation. The contact endpoint in `api/contact.mjs` is deployed as a Vercel Node function with built-in APIs only. A basic static preview does not execute that endpoint; use Vercel development for a complete backend preview. Run the static pages locally with:
 

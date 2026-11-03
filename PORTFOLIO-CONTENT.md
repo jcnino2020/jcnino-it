@@ -32,3 +32,7 @@ Updated 3 November 2026.
 - Missing pages: root 404.html uses absolute asset/navigation URLs so deeply nested missing paths can recover. Verify production HTTP status is 404, not a successful-page rewrite.
 
 - Architecture documentation now separates static page delivery from the new server-side contact path. The page-delivery SVG is explicitly scoped and does not imply the contact form is browser-only. Native-select verification confirms all six topics, including Web development; an integration test checks that each selectable topic is accepted by the delivery validator.
+
+## Approved palette update
+
+The owner selected midnight navy + ice blue + off-white. Recolored public-site CSS, browser theme metadata, and source-based vector diagrams. Photography and real interface screenshots remain faithful to their originals. Error text keeps its semantic warm hue; success uses explicit text with an ice-blue tint. Existing features and contact behavior are preserved.

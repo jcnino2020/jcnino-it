@@ -1,0 +1,405 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-03T15:34:49.997589Z",
+  "title": "Design System: JC Niñonuevo IT Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0462 257.85)",
+          "oklch(26% 0.0462 257.85)",
+          "oklch(38% 0.0462 257.85)",
+          "oklch(49% 0.0462 257.85)",
+          "oklch(61% 0.0462 257.85)",
+          "oklch(72% 0.0462 257.85)",
+          "oklch(84% 0.0462 257.85)",
+          "oklch(95% 0.0462 257.85)"
+        ]
+      },
+      "deep": {
+        "role": "primary",
+        "displayName": "Deep",
+        "tonalRamp": [
+          "oklch(15% 0.0451 262.22)",
+          "oklch(26% 0.0451 262.22)",
+          "oklch(38% 0.0451 262.22)",
+          "oklch(49% 0.0451 262.22)",
+          "oklch(61% 0.0451 262.22)",
+          "oklch(72% 0.0451 262.22)",
+          "oklch(84% 0.0451 262.22)",
+          "oklch(95% 0.0451 262.22)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0054 274.97)",
+          "oklch(26% 0.0054 274.97)",
+          "oklch(38% 0.0054 274.97)",
+          "oklch(49% 0.0054 274.97)",
+          "oklch(61% 0.0054 274.97)",
+          "oklch(72% 0.0054 274.97)",
+          "oklch(84% 0.0054 274.97)",
+          "oklch(95% 0.0054 274.97)"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "tonalRamp": [
+          "oklch(15% 0.0125 255.51)",
+          "oklch(26% 0.0125 255.51)",
+          "oklch(38% 0.0125 255.51)",
+          "oklch(49% 0.0125 255.51)",
+          "oklch(61% 0.0125 255.51)",
+          "oklch(72% 0.0125 255.51)",
+          "oklch(84% 0.0125 255.51)",
+          "oklch(95% 0.0125 255.51)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15% 0.0222 256.74)",
+          "oklch(26% 0.0222 256.74)",
+          "oklch(38% 0.0222 256.74)",
+          "oklch(49% 0.0222 256.74)",
+          "oklch(61% 0.0222 256.74)",
+          "oklch(72% 0.0222 256.74)",
+          "oklch(84% 0.0222 256.74)",
+          "oklch(95% 0.0222 256.74)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0470 255.45)",
+          "oklch(26% 0.0470 255.45)",
+          "oklch(38% 0.0470 255.45)",
+          "oklch(49% 0.0470 255.45)",
+          "oklch(61% 0.0470 255.45)",
+          "oklch(72% 0.0470 255.45)",
+          "oklch(84% 0.0470 255.45)",
+          "oklch(95% 0.0470 255.45)"
+        ]
+      },
+      "ice": {
+        "role": "primary",
+        "displayName": "Ice",
+        "tonalRamp": [
+          "oklch(15% 0.0608 244.76)",
+          "oklch(26% 0.0608 244.76)",
+          "oklch(38% 0.0608 244.76)",
+          "oklch(49% 0.0608 244.76)",
+          "oklch(61% 0.0608 244.76)",
+          "oklch(72% 0.0608 244.76)",
+          "oklch(84% 0.0608 244.76)",
+          "oklch(95% 0.0608 244.76)"
+        ]
+      },
+      "ice-hover": {
+        "role": "primary",
+        "displayName": "Ice Hover",
+        "tonalRamp": [
+          "oklch(15% 0.0366 244.41)",
+          "oklch(26% 0.0366 244.41)",
+          "oklch(38% 0.0366 244.41)",
+          "oklch(49% 0.0366 244.41)",
+          "oklch(61% 0.0366 244.41)",
+          "oklch(72% 0.0366 244.41)",
+          "oklch(84% 0.0366 244.41)",
+          "oklch(95% 0.0366 244.41)"
+        ]
+      },
+      "on-dark": {
+        "role": "neutral",
+        "displayName": "On Dark",
+        "tonalRamp": [
+          "oklch(15% 0.0086 264.52)",
+          "oklch(26% 0.0086 264.52)",
+          "oklch(38% 0.0086 264.52)",
+          "oklch(49% 0.0086 264.52)",
+          "oklch(61% 0.0086 264.52)",
+          "oklch(72% 0.0086 264.52)",
+          "oklch(84% 0.0086 264.52)",
+          "oklch(95% 0.0086 264.52)"
+        ]
+      },
+      "heading-accent": {
+        "role": "primary",
+        "displayName": "Heading Accent",
+        "tonalRamp": [
+          "oklch(15% 0.0758 250.09)",
+          "oklch(26% 0.0758 250.09)",
+          "oklch(38% 0.0758 250.09)",
+          "oklch(49% 0.0758 250.09)",
+          "oklch(61% 0.0758 250.09)",
+          "oklch(72% 0.0758 250.09)",
+          "oklch(84% 0.0758 250.09)",
+          "oklch(95% 0.0758 250.09)"
+        ]
+      },
+      "research-accent": {
+        "role": "primary",
+        "displayName": "Research Accent",
+        "tonalRamp": [
+          "oklch(15% 0.0775 250.77)",
+          "oklch(26% 0.0775 250.77)",
+          "oklch(38% 0.0775 250.77)",
+          "oklch(49% 0.0775 250.77)",
+          "oklch(61% 0.0775 250.77)",
+          "oklch(72% 0.0775 250.77)",
+          "oklch(84% 0.0775 250.77)",
+          "oklch(95% 0.0775 250.77)"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Focus",
+        "tonalRamp": [
+          "oklch(15% 0.1228 248.03)",
+          "oklch(26% 0.1228 248.03)",
+          "oklch(38% 0.1228 248.03)",
+          "oklch(49% 0.1228 248.03)",
+          "oklch(61% 0.1228 248.03)",
+          "oklch(72% 0.1228 248.03)",
+          "oklch(84% 0.1228 248.03)",
+          "oklch(95% 0.1228 248.03)"
+        ]
+      },
+      "contact": {
+        "role": "neutral",
+        "displayName": "Contact",
+        "tonalRamp": [
+          "oklch(15% 0.0544 257.61)",
+          "oklch(26% 0.0544 257.61)",
+          "oklch(38% 0.0544 257.61)",
+          "oklch(49% 0.0544 257.61)",
+          "oklch(61% 0.0544 257.61)",
+          "oklch(72% 0.0544 257.61)",
+          "oklch(84% 0.0544 257.61)",
+          "oklch(95% 0.0544 257.61)"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Field",
+        "tonalRamp": [
+          "oklch(15% 0.0515 258.32)",
+          "oklch(26% 0.0515 258.32)",
+          "oklch(38% 0.0515 258.32)",
+          "oklch(49% 0.0515 258.32)",
+          "oklch(61% 0.0515 258.32)",
+          "oklch(72% 0.0515 258.32)",
+          "oklch(84% 0.0515 258.32)",
+          "oklch(95% 0.0515 258.32)"
+        ]
+      },
+      "form-help": {
+        "role": "neutral",
+        "displayName": "Form Help",
+        "tonalRamp": [
+          "oklch(15% 0.0256 255.57)",
+          "oklch(26% 0.0256 255.57)",
+          "oklch(38% 0.0256 255.57)",
+          "oklch(49% 0.0256 255.57)",
+          "oklch(61% 0.0256 255.57)",
+          "oklch(72% 0.0256 255.57)",
+          "oklch(84% 0.0256 255.57)",
+          "oklch(95% 0.0256 255.57)"
+        ]
+      },
+      "field-border": {
+        "role": "neutral",
+        "displayName": "Field Border",
+        "tonalRamp": [
+          "oklch(15% 0.0529 251.25)",
+          "oklch(26% 0.0529 251.25)",
+          "oklch(38% 0.0529 251.25)",
+          "oklch(49% 0.0529 251.25)",
+          "oklch(61% 0.0529 251.25)",
+          "oklch(72% 0.0529 251.25)",
+          "oklch(84% 0.0529 251.25)",
+          "oklch(95% 0.0529 251.25)"
+        ]
+      },
+      "field-error": {
+        "role": "neutral",
+        "displayName": "Field Error",
+        "tonalRamp": [
+          "oklch(15% 0.0556 37.59)",
+          "oklch(26% 0.0556 37.59)",
+          "oklch(38% 0.0556 37.59)",
+          "oklch(49% 0.0556 37.59)",
+          "oklch(61% 0.0556 37.59)",
+          "oklch(72% 0.0556 37.59)",
+          "oklch(84% 0.0556 37.59)",
+          "oklch(95% 0.0556 37.59)"
+        ]
+      },
+      "invalid-border": {
+        "role": "neutral",
+        "displayName": "Invalid Border",
+        "tonalRamp": [
+          "oklch(15% 0.0820 35.59)",
+          "oklch(26% 0.0820 35.59)",
+          "oklch(38% 0.0820 35.59)",
+          "oklch(49% 0.0820 35.59)",
+          "oklch(61% 0.0820 35.59)",
+          "oklch(72% 0.0820 35.59)",
+          "oklch(84% 0.0820 35.59)",
+          "oklch(95% 0.0820 35.59)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Hero Display",
+        "purpose": "Main-site hero headline."
+      },
+      "headline": {
+        "displayName": "Section Headline",
+        "purpose": "Major main-site section headings."
+      },
+      "title": {
+        "displayName": "Project Title",
+        "purpose": "Project work entries."
+      },
+      "body": {
+        "displayName": "Base Body",
+        "purpose": "Inherited site body text."
+      },
+      "reading": {
+        "displayName": "Case Reading",
+        "purpose": "Case-study prose."
+      },
+      "label": {
+        "displayName": "Field Label",
+        "purpose": "Visible contact field labels."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "control-transition",
+        "value": "0.2s ease",
+        "purpose": "Primary action and navigation state feedback."
+      },
+      {
+        "name": "screenshot-transition",
+        "value": "0.3s ease-out",
+        "purpose": "Small screenshot scale on hover."
+      },
+      {
+        "name": "reduced-motion-duration",
+        "value": "0.01ms",
+        "purpose": "Main-site transitions and animations under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack-and-menu",
+        "value": "980px"
+      },
+      {
+        "name": "mobile",
+        "value": "640px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ice blue action used on dark sections.",
+      "html": "<button class=\"ds-primary\" type=\"button\">Explore my work</button>",
+      "css": ".ds-primary{font-family:HN,'Helvetica Neue',Arial,sans-serif;display:inline-flex;align-items:center;justify-content:space-between;gap:26px;padding:15px 20px;background:var(--ice,#b8deff);color:var(--deep,#0b162b);font-size:14px;font-weight:700;border:0;border-radius:0;cursor:pointer;transition:transform .2s,background .2s}.ds-primary:hover{background:#d4ebff;transform:translateY(-2px)}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-filter:focus-visible,.ds-field input:focus-visible,.ds-nav a:focus-visible,.ds-card a:focus-visible{outline:3px solid #337dbd;outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-primary{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Outlined Action",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Bordered header contact action on navy.",
+      "html": "<div class=\"ds-outline-stage\"><button class=\"ds-outline\" type=\"button\">Let’s talk</button></div>",
+      "css": ".ds-outline-stage{padding:20px;background:var(--deep,#0b162b)}.ds-outline{font-family:HN,'Helvetica Neue',Arial,sans-serif;display:inline-flex;align-items:center;gap:28px;border:1px solid #adc0da;border-radius:0;color:#f6f9ff;background:transparent;padding:10px 16px;font-size:14px;font-weight:700;cursor:pointer;transition:background .2s,color .2s}.ds-outline:hover{background:var(--ice,#b8deff);color:var(--deep,#0b162b)}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-filter:focus-visible,.ds-field input:focus-visible,.ds-nav a:focus-visible,.ds-card a:focus-visible{outline:3px solid #337dbd;outline-offset:4px}"
+    },
+    {
+      "name": "Category Filter",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "Category filter with a navy selected state.",
+      "html": "<div class=\"ds-filters\"><button class=\"ds-filter\" type=\"button\" aria-pressed=\"true\">All work</button><button class=\"ds-filter\" type=\"button\" aria-pressed=\"false\">Web</button></div>",
+      "css": ".ds-filters{display:flex;gap:8px;flex-wrap:wrap;background:var(--mist,#e9eff7);padding:12px}.ds-filter{font-family:HN,'Helvetica Neue',Arial,sans-serif;border:1px solid #788fad;border-radius:0;background:transparent;color:var(--ink,#17263c);padding:11px 16px;min-height:44px;cursor:pointer;font-size:15px;font-weight:500}.ds-filter[aria-pressed=\"true\"]{background:var(--deep,#0b162b);color:#f6f9ff;border-color:var(--deep,#0b162b)}.ds-filter:hover{background:#d8e4f2}.ds-filter[aria-pressed=\"true\"]:hover{background:#25456c}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-filter:focus-visible,.ds-field input:focus-visible,.ds-nav a:focus-visible,.ds-card a:focus-visible{outline:3px solid #337dbd;outline-offset:4px}"
+    },
+    {
+      "name": "Contact Field",
+      "kind": "input",
+      "refersTo": "input-contact",
+      "description": "Visible label and dark field from the enquiry form.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-email\">Email</label><input id=\"ds-email\" type=\"email\" value=\"visitor@example.com\" aria-describedby=\"ds-help\"><p id=\"ds-help\">Use an address where I can reply.</p></div>",
+      "css": ".ds-field{font-family:HN,'Helvetica Neue',Arial,sans-serif;background:#142640;color:#f6f9ff;padding:20px;max-width:420px}.ds-field label{display:block;font-size:15px;font-weight:700;margin-bottom:9px}.ds-field input{font-family:HN,'Helvetica Neue',Arial,sans-serif;display:block;box-sizing:border-box;width:100%;min-height:49px;border:1px solid #91acca;background:#0d1d35;color:#f6f9ff;padding:12px;font-size:16px;line-height:1.5;border-radius:0;caret-color:var(--ice,#b8deff)}.ds-field input[aria-invalid=\"true\"]{border:2px solid #ffbcaa}.ds-field p{font-size:14px;color:#ccd8e8;margin:9px 0 0}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-filter:focus-visible,.ds-field input:focus-visible,.ds-nav a:focus-visible,.ds-card a:focus-visible{outline:3px solid #337dbd;outline-offset:4px}"
+    },
+    {
+      "name": "Main Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Restrained horizontal navigation on navy.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Portfolio\"><a href=\"#home\">Home</a><a href=\"#projects\">Work</a><a href=\"#experience\">Experience</a></nav>",
+      "css": ".ds-nav{font-family:HN,'Helvetica Neue',Arial,sans-serif;display:flex;align-items:center;gap:34px;flex-wrap:wrap;padding:20px;background:var(--deep,#0b162b)}.ds-nav a{font-size:14px;color:#d1dced;text-decoration:none;transition:color .2s}.ds-nav a:hover{color:var(--ice,#b8deff)}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-filter:focus-visible,.ds-field input:focus-visible,.ds-nav a:focus-visible,.ds-card a:focus-visible{outline:3px solid #337dbd;outline-offset:4px}"
+    },
+    {
+      "name": "Work Entry",
+      "kind": "card",
+      "refersTo": "work-card",
+      "description": "An open project entry with a ruled title and supporting text; media supplied by the actual project.",
+      "html": "<div class=\"ds-card-stage\"><article class=\"ds-card\"><div class=\"ds-card-detail\"><h3><a href=\"#project\">Project title</a></h3></div><p>A short description of the documented interface and its scope.</p></article></div>",
+      "css": ".ds-card-stage{background:var(--mist,#e9eff7);padding:24px}.ds-card{font-family:HN,'Helvetica Neue',Arial,sans-serif;color:var(--ink,#17263c);max-width:470px}.ds-card-detail{border-top:1px solid #a8b9ce;padding-top:18px}.ds-card h3{font-size:clamp(27px,2.6vw,38px);line-height:1.12;letter-spacing:-.025em;margin:3px 0 0;font-weight:700}.ds-card a{color:inherit;text-decoration:none}.ds-card p{color:var(--muted,#4a5d76);font-size:15px;line-height:1.5;margin:13px 0 0}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-filter:focus-visible,.ds-field input:focus-visible,.ds-nav a:focus-visible,.ds-card a:focus-visible{outline:3px solid #337dbd;outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Midnight navy + ice blue + off-white",
+    "overview": "The owner's chosen midnight navy, ice blue, and off-white palette frames a portfolio of real technical and creative work. Broad dark sections and light reading surfaces establish hierarchy; restrained blue accents connect actions, emphasis, and diagrams.\n\nThis record describes the current build in assets/home.css. Preserve its Helvetica Neue typography, page composition, and original media when extending the palette. The retained web-systems archive also uses assets/portfolio.css and assets/2026.css; its older rounded and elevated patterns are a compatibility boundary, not defaults for new surfaces.",
+    "keyCharacteristics": [
+      "Midnight navy anchors with ice blue emphasis.",
+      "Off-white and soft blue reading surfaces.",
+      "Bold Helvetica Neue headings, generous spacing, and thin dividers.",
+      "Flat, square-cornered controls in the main site.",
+      "Real screenshots and photographs retain their original content."
+    ],
+    "rules": [
+      {
+        "name": "The Palette Continuity Rule",
+        "body": "Use the approved navy, ice blue, and off-white roles for new brand surfaces; preserve the meaning of error and focus states.",
+        "section": "colors"
+      },
+      {
+        "name": "The Existing Type Rule",
+        "body": "Keep the bundled Helvetica Neue family and the observed bold-heading/body relationship when extending the current site.",
+        "section": "typography"
+      },
+      {
+        "name": "The Main Surface Rule",
+        "body": "Use tonal section changes and thin rules for depth on the main site; preserve archive-specific treatments only within the existing archive.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use ice blue for primary actions and emphasis on navy.",
+      "Do retain off-white and soft blue surfaces with dark text for long reading.",
+      "Do preserve the current typography, responsive composition, real photographs, and interface screenshots.",
+      "Do keep visible focus, form hints, errors, and reduced-motion support."
+    ],
+    "donts": [
+      "Don't reintroduce the former green brand palette on new public surfaces.",
+      "Don't treat ice blue as small text on the off-white reading surface.",
+      "Don't inherit the archive's radius and shadow vocabulary into new main-site components by default.",
+      "Don't recolor real media or document contents merely to match the site palette."
+    ]
+  }
+}
