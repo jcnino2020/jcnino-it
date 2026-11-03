@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://jcnino-it.vercel.app/</loc>
+  </url>
+  <url>
+    <loc>https://jcnino-it.vercel.app/web-development</loc>
+  </url>
+  <url>
+    <loc>https://jcnino-it.vercel.app/system-design</loc>
+  </url>
+  <url>
+    <loc>https://jcnino-it.vercel.app/research-capstones</loc>
+  </url>
+  <url>
+    <loc>https://jcnino-it.vercel.app/network-labs</loc>
+  </url>
+  <url>
+    <loc>https://jcnino-it.vercel.app/creative-work</loc>
+  </url>
+  <url>
+    <loc>https://jcnino-it.vercel.app/case-study-gnet</loc>
+  </url>
+  <url>
+    <loc>https://jcnino-it.vercel.app/case-study-drainwatch</loc>
+  </url>
+  <url>
+    <loc>https://jcnino-it.vercel.app/case-study-hydroalert</loc>
+  </url>
+  <url>
+    <loc>https://jcnino-it.vercel.app/case-study-truthlens</loc>
+  </url>
+</urlset>

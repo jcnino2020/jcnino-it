@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">JC Niñonuevo — Useful digital systems</title>
+  <desc id="desc">A code-authored social sharing card in the approved midnight navy and ice-blue palette. Developer, researcher, and systems thinker in Bacolod City, Philippines.</desc>
+  <rect width="1200" height="630" fill="#0b162b"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+    <text x="80" y="106" font-size="40" font-weight="700" letter-spacing="-1" fill="#f6f9ff">JC<tspan fill="#b8deff">.</tspan></text>
+    <text x="1120" y="106" text-anchor="end" font-size="23" fill="#c4d2e5">jcnino-it.vercel.app</text>
+    <text x="80" y="259" font-size="84" font-weight="700" letter-spacing="-2.4" fill="#f6f9ff">JC Niñonuevo</text>
+    <text x="80" y="352" font-size="70" font-weight="700" letter-spacing="-2" fill="#b8deff">Useful digital systems.</text>
+    <text x="80" y="426" font-size="29" fill="#c4d2e5">Developer · Researcher · Systems thinker</text>
+    <path d="M80 490H1120" stroke="#516b8c" stroke-width="1"/>
+    <text x="80" y="554" font-size="21" fill="#c4d2e5">Web · Data · Networks</text>
+    <text x="1120" y="554" text-anchor="end" font-size="21" fill="#c4d2e5">Bacolod City, Philippines</text>
+  </g>
+</svg>

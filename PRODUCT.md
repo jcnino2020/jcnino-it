@@ -29,3 +29,7 @@ The user requested copy-email, contact form, project filters, collection wayfind
 
 ## Approved color system
 Midnight navy (#0b162b) anchors dark sections and navigation. Ice blue (#b8deff) identifies primary actions and highlights. Off-white (#f7f8fc), soft blue (#e9eff7), and blue-gray separators support reading. Existing typography, page composition, and real media remain unchanged. This is the owner-selected replacement for the former green brand palette.
+
+## Sharing and discoverability
+
+The owner requested automatic deployment of social previews, corrected public URLs, canonical metadata, a sitemap, robots rules, and Person structured data. The canonical origin is `https://jcnino-it.vercel.app`, with clean page paths matching Vercel routing. Utility/error pages are excluded from the sitemap and marked noindex. Professional identity metadata includes only confirmed public details and verified profiles.

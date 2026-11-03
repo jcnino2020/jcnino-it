@@ -52,3 +52,11 @@ Education/training is sourced from the supplied resume. The owner confirmed that
 `404.html` is the custom Vercel missing-page response and uses root-absolute assets. The legacy web archive now links to every collection. Captions/transcripts are not fabricated: original films currently lack caption tracks and the owner has no files; players request captions when supplied, and text overviews/the lab read-along remain available.
 
 Run backend validation and delivery-contract tests with `node --test tests/contact.test.mjs`. These tests inject an upstream response and never send messages to the real inbox.
+
+## Sharing and search discovery
+
+The public origin is `https://jcnino-it.vercel.app`. All 10 public pages have clean canonical URLs, Open Graph metadata, and large social cards using the local 1200 × 630 PNG. `sitemap.xml` lists these pages and `robots.txt` advertises the sitemap. The photo manager and error page use `noindex`; this is an indexing preference, not access control.
+
+The homepage Person JSON-LD uses the public name, approved headshot, existing description, and verified GitHub/YouTube profiles. It excludes private resume details and unverified profile identifiers.
+
+Refresh metadata with `python3 scripts/build-seo.py`, render the card with `python3 scripts/render-social-card.py` (ImageMagick required), and validate with `python3 scripts/validate-seo.py`. After deployment, use `python3 scripts/validate-seo.py --live` to verify direct page responses and published discovery assets. Social platforms and search engines control recrawling and cache refreshes.

@@ -36,3 +36,13 @@ Updated 3 November 2026.
 ## Approved palette update
 
 The owner selected midnight navy + ice blue + off-white. Recolored public-site CSS, browser theme metadata, and source-based vector diagrams. Photography and real interface screenshots remain faithful to their originals. Error text keeps its semantic warm hue; success uses explicit text with an ice-blue tint. Existing features and contact behavior are preserved.
+
+## Sharing metadata evidence
+
+- Public origin: `https://jcnino-it.vercel.app`; canonical paths follow the existing Vercel clean-URL configuration.
+- The local social card uses the approved navy, ice-blue, and off-white palette, existing public identity/location, and a 1200 × 630, 8-bit RGB PNG. Its editable SVG and render script are included.
+- The sitemap contains 10 public pages. Utility/error pages, API routes, query-state variations, and downloads are excluded. Utility/error pages remain crawlable so their noindex directives can be read.
+- Person JSON-LD uses the resume-confirmed public name, approved headshot, and existing description. GitHub account `jcnino2020` was confirmed through the connected account (ID 162215151); YouTube handle `@jcninoo` was verified from the original films. LinkedIn remains a visible existing link but is excluded from `sameAs` because independent verification was unavailable. No X handle or private account email is published.
+- Validation covers singleton metadata, absolute image URLs, clean canonical paths, structured-data boundaries, sitemap/robots consistency, image dimensions, and live asset equality. Page bodies are unchanged by this metadata update.
+
+Implementation references: [Open Graph](https://ogp.me/), [Schema.org Person](https://schema.org/Person), and [Google sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap). Metadata supports discovery without promising indexing, ranking, or immediate social-cache refreshes.
