@@ -1,0 +1,17 @@
+EXPECTED VERIFICATION COMMANDS — NOT CAPTURED DEVICE OUTPUT
+
+S1
+show vlan brief
+show interfaces trunk
+
+R1
+show ip interface brief
+show ip route
+show ip dhcp binding
+
+PC-A / PC-B
+ipconfig
+ping <own default gateway>
+ping <other PC address>
+
+Record actual results, address leases, and troubleshooting notes in your own lab log.
