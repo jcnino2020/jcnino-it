@@ -56,3 +56,9 @@ All four supplied public URLs returned HTTP 200 during browser inspection. Gawan
 Descriptions and project-focus labels summarize the observable interfaces. No individual roles, repositories, completion dates, client relationships, operational guarantees, or measured outcomes were supplied for these four entries. Cards link directly to the supplied sites without fabricated case studies or source links. Existing case-study pages and collection routes remain available. Screenshots preserve the sites’ original colors.
 
 Local browser verification passed for four ordered cards and their direct URLs, actual image loading, category/search/empty/reset behavior across seven projects and collections, desktop/mobile overflow, and absence of JavaScript errors. Existing canonical/social metadata validation also passed.
+
+## AWS IAM certificate (4 November 2026)
+
+Source: owner-supplied `/Users/jcnino/Downloads/AWS - IAM.pdf`, one landscape page reviewed visually and through text extraction. It reads “AWS Training & Certification”, “Completion Certificate”, “Introduction to AWS Identity and Access Management (IAM)”, “Completed: October 29, 2026”, and “Awarded to JAN CARLO NIÑONUEVO”. The document contains no displayed verification ID/URL. It supports a course completion entry, not a claim of an AWS professional certification, exam result, or demonstrated production cloud experience.
+
+The homepage training heading and earlier publication-gap statements are updated for this newly supplied evidence. `downloads/AWS-IAM-Completion-Certificate.pdf` is a byte-identical copy of the original, with no authoring, alteration, or recoloring. The certificate exposes only the public name, course, issuer heading, and completion date. No CV or existing technical lab is changed.

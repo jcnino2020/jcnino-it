@@ -22,7 +22,7 @@ Public project source: https://github.com/jcnino2020/jcnino, directories gnet, d
 Use real work as evidence. Distinguish prototype behavior from deployed services. Keep contact and CV access easy. Preserve the existing visual identity.
 
 ## Publication gaps
-The owner confirmed there are no testimonials, certificate/award files, or approved research files yet. Present documented training and newly authored concept briefs honestly; do not create fake certificates, endorsements, published results, or saved simulation files.
+The owner has supplied an AWS IAM course completion certificate. Testimonials, award files, and approved research files remain unavailable. Present documented training and newly authored concept briefs honestly; do not create fake certificates, endorsements, published results, or saved simulation files.
 
 ## Visitor features
 The user requested copy-email, contact form, project filters, collection wayfinding, video accessibility support, and a real custom 404 page with automatic deployment. The contact form uses a POST-only Vercel function connected to the existing private enquiry inbox at www.jcnino.dev; it does not promise email notifications. No inbox authentication or database credentials are exposed. Three original films have no caption track on YouTube, and the owner confirmed no caption files are available. Request captions in opt-in players, provide written overviews and the network lab text, and do not invent transcripts. The user subsequently selected midnight navy, ice blue, and off-white for the website. Preserve layout, content, and functionality while applying this approved palette across public pages and diagrams.
@@ -37,3 +37,7 @@ The owner requested automatic deployment of social previews, corrected public UR
 ## Current featured work
 
 The homepage features the owner-selected GawangPinas, PasabayBCD, Sugar Inventory Monitoring, and Lakat Ta, with real public-interface previews and direct website links. Inventory access requires sign-in, and the travel catalog is sample planning content. Preserve existing archive/case-study routes and the approved portfolio palette.
+
+## AWS course completion
+
+The owner supplied a one-page certificate for Introduction to AWS Identity and Access Management (IAM), awarded to Jan Carlo Niñonuevo by AWS Training & Certification and completed 29 October 2026. List it as a course completion certificate in the homepage training section, with links to the unchanged original PDF. Do not elevate it into an AWS professional certification or invent a verification ID/URL.

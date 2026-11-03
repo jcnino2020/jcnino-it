@@ -43,7 +43,7 @@ Project source dates describe recorded source changes, rather than project start
 
 ## Content collection boundaries
 
-Education/training is sourced from the supplied resume. The owner confirmed that testimonials, certificate/award documents, and approved research files are unavailable; no such claims are fabricated. Research downloads are newly prepared project briefs, rather than published papers. The practice configurations have not been executed in Packet Tracer or on hardware; no saved .pkt/.pka simulation or observed output is claimed.
+Education/training is sourced from the supplied resume and AWS IAM course completion certificate. The supplied certificate is available from the homepage training section. Testimonials, award documents, and approved research files remain unavailable; no such claims are fabricated. Research downloads are newly prepared project briefs, rather than published papers. The practice configurations have not been executed in Packet Tracer or on hardware; no saved .pkt/.pka simulation or observed output is claimed.
 
 ## Visitor features
 
