@@ -46,3 +46,13 @@ The owner selected midnight navy + ice blue + off-white. Recolored public-site C
 - Validation covers singleton metadata, absolute image URLs, clean canonical paths, structured-data boundaries, sitemap/robots consistency, image dimensions, and live asset equality. Page bodies are unchanged by this metadata update.
 
 Implementation references: [Open Graph](https://ogp.me/), [Schema.org Person](https://schema.org/Person), and [Google sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap). Metadata supports discovery without promising indexing, ranking, or immediate social-cache refreshes.
+
+## Featured project replacement (4 November 2026)
+
+The owner selected GawangPinas, PasabayBCD, Sugar Inventory Monitoring, and Lakat Ta for the live homepage’s “Built for the real world” section and explicitly requested deployment after correcting the local-only selection. The three isolated HTML design studies are unchanged.
+
+All four supplied public URLs returned HTTP 200 during browser inspection. GawangPinas redirects to www.gawangpinas.com and identifies itself as an MSME marketplace/capstone. PasabayBCD exposes cargo estimates and shipment-tracking interfaces; no claimed savings, verified-hauler totals, payment integrations, or operational results are independently endorsed here. Its screenshot shows the actual estimator with example values rather than unverified hero metrics. Sugar Inventory’s screenshot is the public sign-in screen; authenticated stock workflows were not accessed or tested. Lakat Ta explicitly describes a sample travel-planning catalog, not a booking service.
+
+Descriptions and project-focus labels summarize the observable interfaces. No individual roles, repositories, completion dates, client relationships, operational guarantees, or measured outcomes were supplied for these four entries. Cards link directly to the supplied sites without fabricated case studies or source links. Existing case-study pages and collection routes remain available. Screenshots preserve the sites’ original colors.
+
+Local browser verification passed for four ordered cards and their direct URLs, actual image loading, category/search/empty/reset behavior across seven projects and collections, desktop/mobile overflow, and absence of JavaScript errors. Existing canonical/social metadata validation also passed.

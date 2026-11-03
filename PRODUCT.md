@@ -33,3 +33,7 @@ Midnight navy (#0b162b) anchors dark sections and navigation. Ice blue (#b8deff)
 ## Sharing and discoverability
 
 The owner requested automatic deployment of social previews, corrected public URLs, canonical metadata, a sitemap, robots rules, and Person structured data. The canonical origin is `https://jcnino-it.vercel.app`, with clean page paths matching Vercel routing. Utility/error pages are excluded from the sitemap and marked noindex. Professional identity metadata includes only confirmed public details and verified profiles.
+
+## Current featured work
+
+The homepage features the owner-selected GawangPinas, PasabayBCD, Sugar Inventory Monitoring, and Lakat Ta, with real public-interface previews and direct website links. Inventory access requires sign-in, and the travel catalog is sample planning content. Preserve existing archive/case-study routes and the approved portfolio palette.
