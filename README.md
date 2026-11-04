@@ -55,7 +55,7 @@ Run backend validation and delivery-contract tests with `node --test tests/conta
 
 ## Sharing and search discovery
 
-The public origin is `https://jcnino-it.vercel.app`. All 10 public pages have clean canonical URLs, Open Graph metadata, and large social cards using the local 1200 × 630 PNG. `sitemap.xml` lists these pages and `robots.txt` advertises the sitemap. The photo manager and error page use `noindex`; this is an indexing preference, not access control.
+The public origin is `https://jcnino-it.vercel.app`. All 14 public pages have clean canonical URLs, Open Graph metadata, and large social cards using the local 1200 × 630 PNG. `sitemap.xml` lists these pages and `robots.txt` advertises the sitemap. The photo manager and error page use `noindex`; this is an indexing preference, not access control.
 
 The homepage Person JSON-LD uses the public name, approved headshot, existing description, and verified GitHub/YouTube profiles. It excludes private resume details and unverified profile identifiers.
 
@@ -63,6 +63,6 @@ Refresh metadata with `python3 scripts/build-seo.py`, render the card with `pyth
 
 ## More navigation
 
-Every public header includes a native More disclosure. `scripts/build-navigation.py` keeps the eleven static headers in sync. The menu covers the five portfolio collections, the education/certificate section, and the four projects featured on the homepage. Utility and missing-page routes are not navigation destinations.
+Every public header includes a native More disclosure. `scripts/build-navigation.py` keeps the fifteen static headers in sync. The menu covers the five portfolio collections, the education/certificate section, and case studies for the four projects featured on the homepage. Utility and missing-page routes are not navigation destinations.
 
 `assets/navigation.js` adds hover opening, a short exit delay, animated closing, keyboard focus handling, Escape, outside click, and touch toggling. `assets/navigation.css` provides the shared popover and mobile layout, with reduced-motion support. Native disclosure behavior remains available without JavaScript on static pages. Run `python3 scripts/build-navigation.py` after changing the menu list, then `python3 scripts/validate-navigation.py` to compare every header against the sitemap collections and homepage project links.

@@ -16,6 +16,10 @@ PUBLIC = [
     'research-capstones.html', 'network-labs.html', 'creative-work.html',
     'case-study-gnet.html', 'case-study-drainwatch.html',
     'case-study-hydroalert.html', 'case-study-truthlens.html',
+    'case-study-gawangpinas.html',
+    'case-study-pasabaybcd.html',
+    'case-study-sugar-inventory.html',
+    'case-study-lakat-ta.html',
 ]
 
 

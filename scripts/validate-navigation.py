@@ -43,11 +43,10 @@ def check(name, source, expected, featured):
         assert menu['controls'] == menu['panel'] and menu['panel'], name
         links = menu['links']
         assert len(links) == len(set(links)) == 10, (name, 'Missing or duplicate links')
-        internal = [link for link in links if link.startswith('/')]
-        assert all(not urlsplit(link).query for link in internal), name
-        pages = {urlsplit(link).path for link in internal if not urlsplit(link).fragment}
-        assert pages == expected, (name, 'Portfolio collection coverage differs', pages ^ expected)
-        assert [link for link in links if link not in internal] == featured, (name, 'Featured projects differ')
+        assert all(link.startswith('/') and not urlsplit(link).query for link in links), name
+        pages = {urlsplit(link).path for link in links if not urlsplit(link).fragment}
+        assert pages == expected | set(featured), (name, 'Portfolio destinations differ')
+        assert [link for link in links if link.startswith('/case-study-')] == featured, (name, 'Featured case studies differ')
         assert '/#education' in links and 'id="education"' in (ROOT / 'index.html').read_text()
         for page in pages:
             assert (ROOT / (page.lstrip('/') + '.html')).is_file(), (name, page)
@@ -56,12 +55,13 @@ def check(name, source, expected, featured):
 
 def main():
     sitemap = ET.parse(ROOT / 'sitemap.xml')
-    expected = {urlsplit(node.text).path for node in sitemap.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')} - {'/'}
-    expected = {page for page in expected if not page.startswith('/case-study-')}
+    sitemap_pages = {urlsplit(node.text).path for node in sitemap.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')} - {'/'}
+    expected = {page for page in sitemap_pages if not page.startswith('/case-study-')}
     home = (ROOT / 'index.html').read_text()
     projects = home.split('<section id="projects"', 1)[1].split('class="project-collections"', 1)[0]
-    featured = list(dict.fromkeys(re.findall(r'href="(https://[^"]+)"', projects)))
+    featured = re.findall(r'href="(/case-study-[^"]+)"', projects)
     assert len(featured) == 4
+    assert set(featured) <= sitemap_pages
     for file in ROOT.glob('*.html'):
         source = file.read_text()
         if file.name == 'photo-manager.html':

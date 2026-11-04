@@ -15,13 +15,13 @@ GROUPS = [
         ('Education & certificates', '/#education'),
     ]),
     ('Case studies', [
-        ('GawangPinas', 'https://gawangpinas.com/',
+        ('GawangPinas', '/case-study-gawangpinas',
          'Philippine MSME marketplace with supplier listings and workspaces for inventory and orders.'),
-        ('PasabayBCD', 'https://pasabaybcd.vercel.app/',
+        ('PasabayBCD', '/case-study-pasabaybcd',
          'Shared freight for Bacolod, with rate estimates, shipment tracking screens, and shipper tools.'),
-        ('Sugar Inventory Monitoring', 'https://sugar-inventory.vercel.app/',
+        ('Sugar Inventory Monitoring', '/case-study-sugar-inventory',
          'Sign-in portal for monitoring sugar stock, SRO quantities, issuance, and deliveries.'),
-        ('Lakat Ta', 'https://lakat-ta.vercel.app/',
+        ('Lakat Ta', '/case-study-lakat-ta',
          'Negros Occidental travel planner with a sample destination catalog, saved places, and itineraries.'),
     ]),
 ]

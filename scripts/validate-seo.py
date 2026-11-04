@@ -67,7 +67,7 @@ def main():
     expected = [config.canonical(name) for name in config.PUBLIC]
     tree = ET.parse(ROOT / 'sitemap.xml')
     locs = [node.text for node in tree.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
-    assert locs == expected and len(set(locs)) == 10
+    assert locs == expected and len(set(locs)) == len(expected)
     assert all(not urlparse(url).query and not urlparse(url).fragment and not url.endswith('.html') for url in locs)
     robots = urllib.robotparser.RobotFileParser(); robots.parse((ROOT / 'robots.txt').read_text().splitlines())
     assert robots.site_maps() == [config.BASE + '/sitemap.xml']
@@ -83,7 +83,7 @@ def main():
     width, height, depth, color, *_ = struct.unpack('>IIBBBBB', image[16:29])
     assert (width, height, depth, color) == (1200, 630, 8, 2)
     assert len(image) < 1_000_000
-    print('Sitemap: 10 clean URLs; robots/noindex: consistent; social image: 1200×630, 8-bit RGB PNG.')
+    print(f'Sitemap: {len(config.PUBLIC)} clean URLs; robots/noindex: consistent; social image: 1200×630, 8-bit RGB PNG.')
     if args.live:
         def fetch(url):
             request = urllib.request.Request(url, headers={'User-Agent': 'PortfolioMetadataCheck/1.0'})

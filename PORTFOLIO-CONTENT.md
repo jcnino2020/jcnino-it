@@ -53,7 +53,7 @@ The owner selected GawangPinas, PasabayBCD, Sugar Inventory Monitoring, and Laka
 
 All four supplied public URLs returned HTTP 200 during browser inspection. GawangPinas redirects to www.gawangpinas.com and identifies itself as an MSME marketplace/capstone. PasabayBCD exposes cargo estimates and shipment-tracking interfaces; no claimed savings, verified-hauler totals, payment integrations, or operational results are independently endorsed here. Its screenshot shows the actual estimator with example values rather than unverified hero metrics. Sugar Inventory’s screenshot is the public sign-in screen; authenticated stock workflows were not accessed or tested. Lakat Ta explicitly describes a sample travel-planning catalog, not a booking service.
 
-Descriptions and project-focus labels summarize the observable interfaces. No individual roles, repositories, completion dates, client relationships, operational guarantees, or measured outcomes were supplied for these four entries. Cards link directly to the supplied sites without fabricated case studies or source links. Existing case-study pages and collection routes remain available. Screenshots preserve the sites’ original colors.
+Descriptions and project-focus labels summarize the observable interfaces. No individual roles, repositories, completion dates, client relationships, operational guarantees, or measured outcomes were supplied for these four entries. Cards link to the project websites and to case studies that document the visible interfaces and review scope. Existing case-study pages and collection routes remain available. Screenshots preserve the sites’ original colors.
 
 Local browser verification passed for four ordered cards and their direct URLs, actual image loading, category/search/empty/reset behavior across seven projects and collections, desktop/mobile overflow, and absence of JavaScript errors. Existing canonical/social metadata validation also passed.
 
@@ -71,6 +71,6 @@ The manual design scan reports mostly pre-existing archive styling and token adv
 
 ## Animated More navigation (4 November 2026)
 
-All eleven public and recovery headers use the same More disclosure. Explore lists the five portfolio collections and the education/certificate section. Case studies lists the four featured homepage projects with a short description for each.
+All fifteen public and recovery headers use the same More disclosure. Explore lists the five portfolio collections and the education/certificate section. Case studies lists the four featured homepage projects with a short description for each.
 
 Browser checks passed for all eleven headers, every destination response, animated opacity on entry/exit, crossing the pointer gap, cancelling a pending close on reentry, keyboard Enter/Tab/arrows, Escape and focus return, focus leaving the menu, outside click, mobile scrolling and toggling, actual link navigation, reduced motion, and the static no-JavaScript fallback. Primary header layout was checked at 981px, 1024px, and 1440px, with 390px touch checks for both header implementations.
