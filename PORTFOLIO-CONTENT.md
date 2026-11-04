@@ -71,6 +71,6 @@ The manual design scan reports mostly pre-existing archive styling and token adv
 
 ## Animated More navigation (4 November 2026)
 
-All ten static public/recovery headers and the shared archive header expose the same native More disclosure. Its two groups cover the nine secondary pages already in the sitemap and the homepage education/certificate section. The generator is idempotent, and the navigation validator compares each header’s destination set against the independently maintained sitemap.
+All eleven public and recovery headers use the same More disclosure. Explore lists the five portfolio collections and the education/certificate section. Built for the real world lists the four featured homepage projects.
 
 Browser checks passed for all eleven headers, every destination response, animated opacity on entry/exit, crossing the pointer gap, cancelling a pending close on reentry, keyboard Enter/Tab/arrows, Escape and focus return, focus leaving the menu, outside click, mobile scrolling and toggling, actual link navigation, reduced motion, and the static no-JavaScript fallback. Primary header layout was checked at 981px, 1024px, and 1440px, with 390px touch checks for both header implementations.

@@ -15,7 +15,7 @@ A professional portfolio with static pages and a serverless contact function for
 
 ## Implementation
 
-The homepage, case studies, and four content collections use semantic static HTML, `assets/home.css`, and `assets/home.js`. The established visual system uses Helvetica Neue with midnight navy, ice blue, and off-white surfaces. The web-project archive uses the existing Tailwind/GSAP setup, `assets/portfolio.css`, `assets/2026.css`, and shared navigation/modal logic in `assets/portfolio.js`.
+The homepage, case studies, and four content collections use semantic static HTML, `assets/home.css`, and `assets/home.js`. The established visual system uses Helvetica Neue with midnight navy, ice blue, and off-white surfaces. The web-project archive uses the existing Tailwind/GSAP setup, `assets/portfolio.css`, `assets/2026.css`, and shared modal logic in `assets/portfolio.js`.
 
 Static pages need no build step or package installation. The contact endpoint in `api/contact.mjs` is deployed as a Vercel Node function with built-in APIs only. A basic static preview does not execute that endpoint; use Vercel development for a complete backend preview. Run the static pages locally with:
 
@@ -63,6 +63,6 @@ Refresh metadata with `python3 scripts/build-seo.py`, render the card with `pyth
 
 ## More navigation
 
-Every public header includes a native More disclosure. `scripts/build-navigation.py` keeps the ten static headers and the shared archive header in sync. The menu covers all nine secondary public pages plus the education/certificate section. Utility and missing-page routes are not navigation destinations.
+Every public header includes a native More disclosure. `scripts/build-navigation.py` keeps the eleven static headers in sync. The menu covers the five portfolio collections, the education/certificate section, and the four projects featured on the homepage. Utility and missing-page routes are not navigation destinations.
 
-`assets/navigation.js` adds hover opening, a short exit delay, animated closing, keyboard focus handling, Escape, outside click, and touch toggling. `assets/navigation.css` provides the shared popover and mobile layout, with reduced-motion support. Native disclosure behavior remains available without JavaScript on static pages. Run `python3 scripts/build-navigation.py` after changing the menu list, then `python3 scripts/validate-navigation.py` to compare every header against the sitemap.
+`assets/navigation.js` adds hover opening, a short exit delay, animated closing, keyboard focus handling, Escape, outside click, and touch toggling. `assets/navigation.css` provides the shared popover and mobile layout, with reduced-motion support. Native disclosure behavior remains available without JavaScript on static pages. Run `python3 scripts/build-navigation.py` after changing the menu list, then `python3 scripts/validate-navigation.py` to compare every header against the sitemap collections and homepage project links.

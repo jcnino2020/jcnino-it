@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Keep the native More disclosure consistent in static and legacy headers."""
+"""Keep the native More disclosure consistent in static headers."""
 from pathlib import Path
 from html import escape
 import re
@@ -14,11 +14,11 @@ GROUPS = [
         ('Photo & video', '/creative-work'),
         ('Education & certificates', '/#education'),
     ]),
-    ('Case studies', [
-        ('GNET Network & Data', '/case-study-gnet'),
-        ('BCD DrainWatch', '/case-study-drainwatch'),
-        ('HydroAlert Negros', '/case-study-hydroalert'),
-        ('TruthLens', '/case-study-truthlens'),
+    ('Built for the real world.', [
+        ('GawangPinas', 'https://gawangpinas.com/'),
+        ('PasabayBCD', 'https://pasabaybcd.vercel.app/'),
+        ('Sugar Inventory Monitoring', 'https://sugar-inventory.vercel.app/'),
+        ('Lakat Ta', 'https://lakat-ta.vercel.app/'),
     ]),
 ]
 
@@ -60,29 +60,7 @@ def main():
         path.write_text(source)
         count += 1
 
-    # This archive injects its header through the retained shared template.
-    path = ROOT / 'assets/portfolio.js'
-    source = clear_generated(path.read_text())
-    if '<a href="index.html#skills" class="nav-link">Skills</a>' not in source:
-        source = source.replace('        <a href="index.html#experience" class="nav-link">Experience</a>',
-                                '        <a href="index.html#skills" class="nav-link">Skills</a>\n        <a href="index.html#experience" class="nav-link">Experience</a>', 1)
-    source = source.replace('<a href="index.html#projects">Work</a><a href="index.html#experience">',
-                            '<a href="index.html#projects">Work</a><a href="index.html#skills">Skills</a><a href="index.html#experience">', 1)
-    source = source.replace('      </div>\n      <div class="hidden md:flex items-center" id="nav-cta">',
-                            '        ' + disclosure('desktop') + '\n      </div>\n      <div class="hidden md:flex items-center" id="nav-cta">', 1)
-    source = source.replace('    </div></div>\n  </div>\n</nav>',
-                            '      ' + disclosure('mobile') + '\n    </div></div>\n  </div>\n</nav>', 1)
-    if 'window.initPortfolioNavigation?.();' not in source:
-        source = source.replace('    injectComponents();', '    injectComponents();\n    window.initPortfolioNavigation?.();', 1)
-    # Rebuilding only inserts generated fragments, never additional indentation.
-    source = re.sub(r'^[ \t]+(?=<!-- BEGIN MORE NAVIGATION -->)', '        ', source, flags=re.M)
-    path.write_text(source)
-    path = ROOT / 'web-development.html'
-    source = path.read_text()
-    if 'assets/navigation.css' not in source:
-        source = source.replace('</head>', '<link rel="stylesheet" href="assets/navigation.css"><script src="assets/navigation.js" defer></script></head>', 1)
-    path.write_text(source)
-    print(f'Updated {count} static headers and the shared archive header.')
+    print(f'Updated {count} static headers.')
 
 
 if __name__ == '__main__':

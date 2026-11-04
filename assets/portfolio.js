@@ -5,42 +5,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     injectComponents();
-    window.initPortfolioNavigation?.();
-    initMobileMenu();
     updateYear();
     initLightboxListeners();
     initProjectDetailsModal();
     initInteractiveEffects();
     initScrollSpy();
 });
-
-/**
- * Global templates for Navigation, Footer, and Lightbox Elements.
- * This completely isolates layout changes to this single JavaScript file
- * and avoids fetching HTML over CORS, supporting direct local execution.
- */const navHtml = `
-<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50">
-  <div class="max-w-7xl mx-auto px-6 sm:px-10">
-    <div class="flex items-center justify-between h-16 md:h-20">
-      <a href="index.html" class="brand-link" aria-label="JC Niñonuevo home"><span class="brand-mark">JC<span class="brand-dot">.</span></span><span class="brand-name">NIÑONUEVO</span></a>
-      <div class="hidden md:flex items-center gap-8" id="nav-links">
-        <a href="index.html#home" class="nav-link">Home</a>
-        <a href="index.html#about" class="nav-link">About</a>
-        <a href="index.html#projects" class="nav-link">Work</a>
-        <a href="index.html#skills" class="nav-link">Skills</a>
-        <a href="index.html#experience" class="nav-link">Experience</a>
-        <!-- BEGIN MORE NAVIGATION --><details class="nav-more" data-nav-more><summary aria-controls="more-desktop-panel">More<span class="nav-more-chevron" aria-hidden="true"></span></summary><div class="nav-more-popover" id="more-desktop-panel"><div class="nav-more-grid"><div class="nav-more-group"><p class="nav-more-heading">Explore</p><ul><li><a href="/web-development">Web systems</a></li><li><a href="/system-design">System design</a></li><li><a href="/research-capstones">Research &amp; capstones</a></li><li><a href="/network-labs">Network labs</a></li><li><a href="/creative-work">Photo &amp; video</a></li><li><a href="/#education">Education &amp; certificates</a></li></ul></div><div class="nav-more-group"><p class="nav-more-heading">Case studies</p><ul><li><a href="/case-study-gnet">GNET Network &amp; Data</a></li><li><a href="/case-study-drainwatch">BCD DrainWatch</a></li><li><a href="/case-study-hydroalert">HydroAlert Negros</a></li><li><a href="/case-study-truthlens">TruthLens</a></li></ul></div></div></div></details><!-- END MORE NAVIGATION -->
-      </div>
-      <div class="hidden md:flex items-center" id="nav-cta"><a href="index.html#contact" class="nav-contact">Let's talk <span aria-hidden="true">↗</span></a></div>
-      <button id="hamburger" class="md:hidden menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span id="ham-icon">Menu</span><span id="close-icon" class="hidden">Close</span></button>
-    </div>
-    <div id="mobile-menu" class="closed md:hidden"><div class="mobile-links">
-      <a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#projects">Work</a><a href="index.html#skills">Skills</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a>
-        <!-- BEGIN MORE NAVIGATION --><details class="nav-more" data-nav-more><summary aria-controls="more-mobile-panel">More<span class="nav-more-chevron" aria-hidden="true"></span></summary><div class="nav-more-popover" id="more-mobile-panel"><div class="nav-more-grid"><div class="nav-more-group"><p class="nav-more-heading">Explore</p><ul><li><a href="/web-development">Web systems</a></li><li><a href="/system-design">System design</a></li><li><a href="/research-capstones">Research &amp; capstones</a></li><li><a href="/network-labs">Network labs</a></li><li><a href="/creative-work">Photo &amp; video</a></li><li><a href="/#education">Education &amp; certificates</a></li></ul></div><div class="nav-more-group"><p class="nav-more-heading">Case studies</p><ul><li><a href="/case-study-gnet">GNET Network &amp; Data</a></li><li><a href="/case-study-drainwatch">BCD DrainWatch</a></li><li><a href="/case-study-hydroalert">HydroAlert Negros</a></li><li><a href="/case-study-truthlens">TruthLens</a></li></ul></div></div></div></details><!-- END MORE NAVIGATION -->
-    </div></div>
-  </div>
-</nav>
-`;
 
 const footerHtml = `
 <footer id="site-footer" class="bg-slate-200 border-t border-border-strong py-12 md:py-16">
@@ -338,15 +308,7 @@ function injectComponents() {
     // Normalize page names by stripping the .html extension to support clean/extensionless URLs
     const normPage = page.replace(/\.html$/, '') || 'index';
 
-    // 1. Inject Navbar
-    const navPlaceholder = document.getElementById('navbar-placeholder');
-    if (navPlaceholder && !document.getElementById('main-nav')) {
-        navPlaceholder.innerHTML = navHtml;
-    } else if (!document.getElementById('main-nav')) {
-        document.body.insertAdjacentHTML('afterbegin', navHtml);
-    }
-
-    // 2. Inject Footer
+    // Inject Footer
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder && !document.getElementById('site-footer')) {
         footerPlaceholder.innerHTML = footerHtml;
@@ -399,48 +361,6 @@ function injectComponents() {
 /**
  * Mobile Menu Toggle logic
  */
-function initMobileMenu() {
-    const btn = document.getElementById('hamburger');
-    const menu = document.getElementById('mobile-menu');
-    const ham = document.getElementById('ham-icon');
-    const x = document.getElementById('close-icon');
-
-    if (!btn || !menu) return;
-
-    let open = false;
-
-    // Remote any duplicate events
-    const newBtn = btn.cloneNode(true);
-    btn.parentNode.replaceChild(newBtn, btn);
-
-    newBtn.addEventListener('click', () => {
-        open = !open;
-        menu.classList.toggle('open', open);
-        menu.classList.toggle('closed', !open);
-        newBtn.setAttribute('aria-expanded', String(open));
-        newBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-        const hamIcon = document.getElementById('ham-icon');
-        const closeIcon = document.getElementById('close-icon');
-        if (hamIcon) hamIcon.classList.toggle('hidden', open);
-        if (closeIcon) closeIcon.classList.toggle('hidden', !open);
-    });
-
-    // Close menu on link click
-    menu.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-            open = false;
-            menu.classList.add('closed');
-            menu.classList.remove('open');
-            newBtn.setAttribute('aria-expanded', 'false');
-            newBtn.setAttribute('aria-label', 'Open menu');
-            const hamIcon = document.getElementById('ham-icon');
-            const closeIcon = document.getElementById('close-icon');
-            if (hamIcon) hamIcon.classList.remove('hidden');
-            if (closeIcon) closeIcon.classList.add('hidden');
-        });
-    });
-}
-
 /**
  * Automatically update copyright year
  */
