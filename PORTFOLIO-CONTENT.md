@@ -71,6 +71,6 @@ The manual design scan reports mostly pre-existing archive styling and token adv
 
 ## Animated More navigation (4 November 2026)
 
-All eleven public and recovery headers use the same More disclosure. Explore lists the five portfolio collections and the education/certificate section. Built for the real world lists the four featured homepage projects.
+All eleven public and recovery headers use the same More disclosure. Explore lists the five portfolio collections and the education/certificate section. Case studies lists the four featured homepage projects with a short description for each.
 
 Browser checks passed for all eleven headers, every destination response, animated opacity on entry/exit, crossing the pointer gap, cancelling a pending close on reentry, keyboard Enter/Tab/arrows, Escape and focus return, focus leaving the menu, outside click, mobile scrolling and toggling, actual link navigation, reduced motion, and the static no-JavaScript fallback. Primary header layout was checked at 981px, 1024px, and 1440px, with 390px touch checks for both header implementations.

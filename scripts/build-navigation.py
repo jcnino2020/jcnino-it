@@ -14,19 +14,28 @@ GROUPS = [
         ('Photo & video', '/creative-work'),
         ('Education & certificates', '/#education'),
     ]),
-    ('Built for the real world.', [
-        ('GawangPinas', 'https://gawangpinas.com/'),
-        ('PasabayBCD', 'https://pasabaybcd.vercel.app/'),
-        ('Sugar Inventory Monitoring', 'https://sugar-inventory.vercel.app/'),
-        ('Lakat Ta', 'https://lakat-ta.vercel.app/'),
+    ('Case studies', [
+        ('GawangPinas', 'https://gawangpinas.com/',
+         'Philippine MSME marketplace with supplier listings and workspaces for inventory and orders.'),
+        ('PasabayBCD', 'https://pasabaybcd.vercel.app/',
+         'Shared freight for Bacolod, with rate estimates, shipment tracking screens, and shipper tools.'),
+        ('Sugar Inventory Monitoring', 'https://sugar-inventory.vercel.app/',
+         'Sign-in portal for monitoring sugar stock, SRO quantities, issuance, and deliveries.'),
+        ('Lakat Ta', 'https://lakat-ta.vercel.app/',
+         'Negros Occidental travel planner with a sample destination catalog, saved places, and itineraries.'),
     ]),
 ]
+
+
+def menu_link(label, url, description=None):
+    detail = f'<span class="nav-more-description">{escape(description)}</span>' if description else ''
+    return f'<li><a href="{url}"><span>{escape(label)}</span>{detail}</a></li>'
 
 
 def disclosure(placement):
     groups = ''.join(
         '<div class="nav-more-group"><p class="nav-more-heading">' + title + '</p><ul>'
-        + ''.join(f'<li><a href="{url}">{escape(label)}</a></li>' for label, url in links)
+        + ''.join(menu_link(*link) for link in links)
         + '</ul></div>' for title, links in GROUPS
     )
     return (
